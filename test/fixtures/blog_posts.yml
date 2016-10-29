@@ -2,14 +2,16 @@
 
 one:
   title: MyString
-  catchline: MyString
+  catchphrase: MyString
   img_path: MyString
   content: MyText
   author: MyString
+  subject: MyString
 
 two:
   title: MyString
-  catchline: MyString
+  catchphrase: MyString
   img_path: MyString
   content: MyText
   author: MyString
+  subject: MyString

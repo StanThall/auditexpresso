@@ -1,10 +1,10 @@
-<%= form_for(blogpost) do |f| %>
-  <% if blogpost.errors.any? %>
+<%= form_for(blog_post) do |f| %>
+  <% if blog_post.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(blogpost.errors.count, "error") %> prohibited this blogpost from being saved:</h2>
+      <h2><%= pluralize(blog_post.errors.count, "error") %> prohibited this blog_post from being saved:</h2>
 
       <ul>
-      <% blogpost.errors.full_messages.each do |message| %>
+      <% blog_post.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -17,8 +17,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :catchline %>
-    <%= f.text_field :catchline %>
+    <%= f.label :catchphrase %>
+    <%= f.text_field :catchphrase %>
   </div>
 
   <div class="field">
@@ -34,6 +34,11 @@
   <div class="field">
     <%= f.label :author %>
     <%= f.text_field :author %>
+  </div>
+
+  <div class="field">
+    <%= f.label :subject %>
+    <%= f.text_field :subject %>
   </div>
 
   <div class="actions">
