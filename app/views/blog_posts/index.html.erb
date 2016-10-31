@@ -1,37 +1,25 @@
 <p id="notice"><%= notice %></p>
+<div class="container">
+  
+  <h1 class="well well-sm lead">Voici l'ensemble des posts du blog</h1>
+    <div class="panel-group">  
+      <% @blog_posts.each do |blog_post| %>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <div class="panel_title"><%= blog_post.title %></div>
+            <img src="<%= image_path blog_post.image_path%>" />
+          </div>
 
-<h1>Blog Posts</h1>
+          <div class="panel-body panel-collapse collapse" id="post_<%= blog_post.id %>">
+            <%= blog_post.content %>
+          </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Catchphrase</th>
-      <th>Img path</th>
-      <th>Content</th>
-      <th>Author</th>
-      <th>Tags</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @blog_posts.each do |blog_post| %>
-      <tr>
-        <td><%= blog_post.title %></td>
-        <td><%= blog_post.catchphrase %></td>
-        <td><%= blog_post.img_path %></td>
-        <td><%= blog_post.content %></td>
-        <td><%= blog_post.author::name %></td>
-        <td><%= blog_post.tag_id %></td>
-        <td><%= link_to 'Show', blog_post %></td>
-        <td><%= link_to 'Edit', edit_blog_post_path(blog_post) %></td>
-        <td><%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
+          <div class="panel-footer">
+            <button class="btn btn-primary btn-xs" data-toggle="collapse" data-target="#post_<%=blog_post.id %>">Lire ce post</button>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <br>
+</div>
 <%= link_to 'New Blog Post', new_blog_post_path %>
