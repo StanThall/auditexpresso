@@ -4,10 +4,10 @@
   <h1 class="well well-sm lead">Voici l'ensemble des posts du blog</h1>
     <div class="panel-group">  
       <% @blog_posts.each do |blog_post| %>
-        <div class="panel panel-primary">
+        <div class="panel panel-default">
           <div class="panel-heading">
-            <div class="panel_title"><%= blog_post.title %></div>
-            <img src="<%= image_path blog_post.image_path%>" />
+            <div class="panel-title post-title"><%= blog_post.title %></div>
+              <img src="<%= image_path blog_post.img_path unless blog_post.img_path == nil %>" class="img-responsive"/>
           </div>
 
           <div class="panel-body panel-collapse collapse" id="post_<%= blog_post.id %>">
