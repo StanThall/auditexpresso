@@ -15,12 +15,11 @@
  */
 
 body {
-	padding-top: 1px;
+	padding-top: 2px;
 }
 
 .navbar {
 	background-color: #922DF4;
-
 }
 
 .navbar-brand {
@@ -31,4 +30,13 @@ body {
 	height: 100%;
 	padding: 7px 15px;
 	width: auto;
+}
+
+#TheFooter {
+	background-color: #451475;
+	color: #fff;
+}
+
+.vcenter {
+	margin-top:20px;
 }
