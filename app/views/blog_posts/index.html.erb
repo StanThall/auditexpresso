@@ -1,24 +1,16 @@
-<p id="notice"><%= notice %></p>
 <div class="container">
-  
-  <h1 class="well well-sm lead">Voici l'ensemble des posts du blog</h1>
-    <div class="panel-group">  
-      <% @blog_posts.each do |blog_post| %>
-        <div class="panel panel-default">
-          <div class="panel-heading">
-            <div class="panel-title post-title"><%= blog_post.title %></div>
-              <img src="<%= image_path blog_post.img_path unless blog_post.img_path == nil %>" class="img-responsive"/>
-          </div>
-
-          <div class="panel-body panel-collapse collapse" id="post_<%= blog_post.id %>">
-            <%= blog_post.content %>
-          </div>
-
-          <div class="panel-footer">
-            <button class="btn btn-primary btn-xs" data-toggle="collapse" data-target="#post_<%=blog_post.id %>">Lire ce post</button>
+  <% @blog_posts.sort.each do |blog_post| %>
+    <% if blog_post.id.odd? %> <div class="row"> <% end %>
+      <div class="col-md-6 <% if blog_post.id.even? %> <% end %>">
+        <div class="thumbnail">
+          <img src="<%= image_path blog_post.img_path unless blog_post.img_path == nil %>" class="img-responsive"/>
+          <div class="caption">
+            <h3><%= blog_post.title %> et id : <%= blog_post.id %></h3>
+            <p><%= blog_post.catchphrase %></p>
+            <button class="btn btn-primary btn-xs" href="">Lire ce post</button>
           </div>
         </div>
-      <% end %>
-    </div>
-  <br>
+      </div>
+    <% if blog_post.id.even? || blog_post.id == @blog_posts.last.id %> </div> <% end %>
+  <% end %>
 </div>

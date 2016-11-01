@@ -15,11 +15,11 @@
  */
 
 body {
-	padding-top: 2px;
+	padding-top: 85px;
 }
 
 .navbar {
-	background-color: #922DF4;
+	background-color: #451475;
 }
 
 .navbar-brand {
@@ -35,8 +35,5 @@ body {
 #TheFooter {
 	background-color: #451475;
 	color: #fff;
-}
-
-.vcenter {
-	margin-top:20px;
+	padding: 10px;
 }
