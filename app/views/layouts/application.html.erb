@@ -11,7 +11,9 @@
   </head>
 
   <body>
+    <%= render "navbar" %>
     <%= yield %>
-      <%= javascript_include_tag bootstrap_js %>
+
+    <%= javascript_include_tag bootstrap_js %>
   </body>
 </html>
