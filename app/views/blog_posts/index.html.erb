@@ -8,6 +8,16 @@
         <div class="caption">
           <p class="lead"><%= blog_post.catchphrase %></p>
           <hr/>
+          <div class="row">
+            <div class="col-md-6">
+              <% blog_post.tags.each do |tag| %>
+                <span class="badge"> <%= tag.label %></span>
+                <% end %>
+            </div>
+            <div class="col-md-6 post_date text-right">
+              <%= blog_post.updated_at.strftime("%d-%b-%y") %>
+            </div>
+          </div>
         </div>
       </div>
     </div>

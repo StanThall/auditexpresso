@@ -42,3 +42,11 @@ body {
 .thumbnail {
 	border-radius: 0px;
 }
+
+.post_date {
+	color: #989799;
+}
+
+.badge{
+	background-color: #989799;
+}
