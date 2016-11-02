@@ -38,3 +38,7 @@ body {
 	color: #fff;
 	padding: 10px;
 }
+
+.thumbnail {
+	border-radius: 0px;
+}

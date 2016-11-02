@@ -2,11 +2,12 @@
   <% if blog_post.id.odd? %> <div class="row"> <% end %>
     <div class="col-md-6">
       <div class="thumbnail">
+        <a href="<%= blog_post_path(blog_post.id) %>">
         <img src="<%= image_path blog_post.img_path unless blog_post.img_path == nil %>" class="img-responsive"/>
+        </a>
         <div class="caption">
           <p class="lead"><%= blog_post.catchphrase %></p>
           <hr/>
-          <%= link_to 'Lire ce post', blog_post_path(blog_post.id), class: "btn btn-primary btn-xs" %>
         </div>
       </div>
     </div>
