@@ -1,16 +1,15 @@
-<div class="container">
-  <% @blog_posts.sort.each do |blog_post| %>
-    <% if blog_post.id.odd? %> <div class="row"> <% end %>
-      <div class="col-md-6 <% if blog_post.id.even? %> <% end %>">
-        <div class="thumbnail">
-          <img src="<%= image_path blog_post.img_path unless blog_post.img_path == nil %>" class="img-responsive"/>
-          <div class="caption">
-            <h3><%= blog_post.title %> et id : <%= blog_post.id %></h3>
-            <p><%= blog_post.catchphrase %></p>
-            <button class="btn btn-primary btn-xs" href="">Lire ce post</button>
-          </div>
+<% @blog_posts.sort.each do |blog_post| %>
+  <% if blog_post.id.odd? %> <div class="row"> <% end %>
+    <div class="col-md-6">
+      <div class="thumbnail">
+        <img src="<%= image_path blog_post.img_path unless blog_post.img_path == nil %>" class="img-responsive"/>
+        <div class="caption">
+          <h3><%= blog_post.title %> et id : <%= blog_post.id %></h3>
+          <p><%= blog_post.catchphrase %></p>
+          <hr/>
+          <%= link_to 'Lire ce post', blog_post_path(blog_post.id), class: "btn btn-primary btn-xs" %>
         </div>
       </div>
-    <% if blog_post.id.even? || blog_post.id == @blog_posts.last.id %> </div> <% end %>
-  <% end %>
-</div>
+    </div>
+  <% if blog_post.id.even? || blog_post.id == @blog_posts.sort.last.id %></div><% end %>
+<% end %>
