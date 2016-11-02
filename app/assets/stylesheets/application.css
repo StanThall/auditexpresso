@@ -16,21 +16,11 @@
 
 body {
 	padding-top: 85px;
-	background-color: #E7E9EC;
+	background-color: #E9EBEE;
 }
 
 .navbar {
-	background-color: #451475;
-}
-
-.navbar-brand {
-	padding: 0px;
-	height: 80px;
-}
-.navbar-brand>img {
-	height: 100%;
-	padding: 7px 15px;
-	width: auto;
+	background-color: #E9EBEE;
 }
 
 #TheFooter {
@@ -50,3 +40,20 @@ body {
 .badge{
 	background-color: #989799;
 }
+
+.row#bottom_row{
+	background-color: #451475;
+	color: #fff;
+}
+	
+#top_row{
+	height: 70px;
+}
+
+#top_row > img {
+	height: 100%;
+	margin: 0 auto;
+	width: auto;
+}
+
+
