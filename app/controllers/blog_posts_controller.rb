@@ -4,7 +4,11 @@ class BlogPostsController < ApplicationController
   # GET /blog_posts
   # GET /blog_posts.json
   def index
-    @blog_posts = BlogPost.all
+    if params[:filter].present?
+      @blog_posts = BlogPost.filter(params[:filter]) 
+    else
+      @blog_posts = BlogPost.all
+    end
   end
 
   # GET /blog_posts/1

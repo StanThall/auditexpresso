@@ -1,25 +1,23 @@
 <% @blog_posts.sort.each do |blog_post| %>
-  <% if blog_post.id.odd? %> <div class="row"> <% end %>
-    <div class="col-md-6">
-      <div class="thumbnail">
-        <a href="<%= blog_post_path(blog_post.id) %>">
-        <img src="<%= image_path blog_post.img_path unless blog_post.img_path == nil %>" class="img-responsive"/>
-        </a>
-        <div class="caption">
-          <p class="lead"><%= blog_post.catchphrase %></p>
-          <hr/>
-          <div class="row">
-            <div class="col-xs-8">
-              <% blog_post.tags.each do |tag| %>
-                <span class="badge"> <%= tag.label %></span>
-                <% end %>
-            </div>
-            <div class="col-xs-4 post_date text-right test">
-              <%= blog_post.created_at.strftime("%d-%b-%y") %>
-            </div>
+  <div class="col-sm-6">
+    <div class="thumbnail">
+      <a href="<%= blog_post_path(blog_post.id) %>">
+      <img src="<%= image_path blog_post.img_path unless blog_post.img_path == nil %>" class="img-responsive"/>
+      </a>
+      <div class="caption">
+        <p class="lead"><%= blog_post.catchphrase %></p>
+        <hr/>
+        <div class="row">
+          <div class="col-xs-8">
+            <% blog_post.tags.each do |tag| %>
+              <a href="<%= blog_posts_path(filter: tag.label) %>"><span class="badge"><%= tag.label %></span></a>
+              <% end %>
+          </div>
+          <div class="col-xs-4 post_date text-right test">
+            <%= blog_post.created_at.strftime("%d-%b-%y") %>
           </div>
         </div>
       </div>
     </div>
-  <% if blog_post.id.even? || blog_post.id == @blog_posts.sort.last.id %></div><% end %>
+  </div>
 <% end %>

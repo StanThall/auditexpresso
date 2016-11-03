@@ -57,7 +57,7 @@ body {
 	background-color: var(--maincolor);
 }
 
-#top_row > img {
+#top_row > a > img {
 	height: 100%;
 	margin: 0 auto;
 	width: auto;
