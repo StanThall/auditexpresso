@@ -12,17 +12,17 @@
 
   <body>
     <%= render "navbar" %>
-    <div class="container">
-      <div class="row">
+    <div class="container-fluid">
+
 
         <div class="col-md-3 well hidden-sm hidden-xs">
         <%= render "sidebar" %>
         </div>
 
-        <div class="col-md-9">
+        <div class="col-md-9 col-xs-12 col-sm-12">
           <%= yield %>
         </div>
-      </div>
+
     </div>
     <%= render "footer" %>
 
