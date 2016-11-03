@@ -1,9 +1,13 @@
+<div class="PostArea">
 <% @blog_posts.sort.each do |blog_post| %>
   <div class="col-sm-6">
     <div class="thumbnail">
+    <div class="thumbnail-header">
       <a href="<%= blog_post_path(blog_post.id) %>">
-      <img src="<%= image_path blog_post.img_path unless blog_post.img_path == nil %>" class="img-responsive"/>
+        <img src="<%= image_path blog_post.img_path unless blog_post.img_path == nil %>" class="img-responsive"/>
+        <p><%= blog_post.title %></p>
       </a>
+    </div>
       <div class="caption">
         <p class="lead"><%= blog_post.catchphrase %></p>
         <hr/>
@@ -21,3 +25,4 @@
     </div>
   </div>
 <% end %>
+</div>

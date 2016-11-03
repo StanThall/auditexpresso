@@ -17,6 +17,10 @@
 :root {
 	--bgd: #F5F9FD;
 	--maincolor:#DA103B;
+	--color_tag_1: #FE4E00;
+	--color_tag_2: #FF0F80;
+	--color_tag_3: #541388;
+	--color_tag_4: #0A7F08;
 }
 
 body {
@@ -28,6 +32,10 @@ body {
 	border-color: var(--bgd);
 }
 
+.PostArea .col-sm-6{
+	padding:3px;
+}
+
 #TheFooter {
 	background-color: var(--maincolor);
 	color: #fff;
@@ -36,6 +44,15 @@ body {
 
 .thumbnail {
 	border-radius: 0px;
+}
+.thumbnail .thumbnail-header > a > p {
+	color:var(--maincolor);
+	position: absolute;
+	left:5%;
+	top:5%;
+	font-size: 3em;
+	word-wrap: normal;
+	font-weight: bold;
 }
 
 .post_date {
@@ -68,7 +85,38 @@ body {
     color: var(--maincolor);
     padding: 2px 2px;
     font-size: 1.2em;
+    font-weight: bold;
 }
+
+#tag_nav_1 {
+    color: var(--color_tag_1);
+}
+#tag_nav_1:hover {
+	color: #fff;
+	background-color: var(--color_tag_1);
+}
+#tag_nav_2 {
+    color: var(--color_tag_2);
+}
+#tag_nav_2:hover {
+    background-color: var(--color_tag_2);
+    color: #fff;
+}
+#tag_nav_3 {
+    color: var(--color_tag_3);
+}
+#tag_nav_3:hover {
+    color: #fff;
+    background-color: var(--color_tag_3);
+}
+#tag_nav_4 {
+    color: var(--color_tag_4);
+}
+#tag_nav_4:hover{
+	color: #fff;
+	background-color: var(--color_tag_4);
+}
+
 
 #top-lines {
 	margin-top: 0px;
