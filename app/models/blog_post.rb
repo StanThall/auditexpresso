@@ -3,4 +3,11 @@ class BlogPost < ApplicationRecord
 	has_many :tag_links
 	has_many :tags, through: :tag_links
 
+	
+	scope :filter, ->(label){joins(:tags).where(tags: {label: label})}
+
+
+
+
+
 end
