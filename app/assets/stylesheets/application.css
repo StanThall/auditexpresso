@@ -14,17 +14,22 @@
  *= require_self
  */
 
+:root {
+	--bgd: #F5F9FD;
+	--maincolor:#DA103B;
+}
+
 body {
-	padding-top: 85px;
-	background-color: #E9EBEE;
+	background-color: var(--bgd);
 }
 
 .navbar {
-	background-color: #E9EBEE;
+	background-color: var(--bgd);
+	border-color: var(--bgd);
 }
 
 #TheFooter {
-	background-color: #451475;
+	background-color: var(--maincolor);
 	color: #fff;
 	padding: 10px;
 }
@@ -41,13 +46,15 @@ body {
 	background-color: #989799;
 }
 
-.row#bottom_row{
-	background-color: #451475;
-	color: #fff;
+#bottom_row{
+	/* background-color: #451475;
+	height: 30px;  */
+	display: flex;
 }
 	
 #top_row{
 	height: 60px;
+	background-color: var(--maincolor);
 }
 
 #top_row > img {
@@ -57,4 +64,14 @@ body {
 	padding: 0;
 }
 
+.nav>li>a {
+    color: var(--maincolor);
+    padding: 2px 2px;
+    font-size: 1.2em;
+}
 
+#top-lines {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	border-top: 1px solid var(--maincolor);
+}
