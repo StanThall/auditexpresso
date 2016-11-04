@@ -60,7 +60,7 @@ body {
 }
 
 .badge{
-	background-color: #989799;
+	   background-color: var(--color_tag_<%= tag.id %>);
 }
 
 #bottom_row{
@@ -72,19 +72,20 @@ body {
 #top_row{
 	height: 60px;
 	background-color: var(--maincolor);
+	padding: -5px;
 }
 
 #top_row > a > img {
 	height: 100%;
 	margin: 0 auto;
 	width: auto;
-	padding: 0;
+	padding: 0px;
 }
 
 .nav>li>a {
     color: var(--maincolor);
-    padding: 2px 2px;
-    font-size: 1.2em;
+    padding: 3px 3px;
+    font-size: 1.3em;
     font-weight: bold;
 }
 
@@ -92,34 +93,38 @@ body {
     color: var(--color_tag_1);
 }
 #tag_nav_1:hover {
-	color: #fff;
-	background-color: var(--color_tag_1);
+	background-color: var(--bgd);
+	border-bottom: 3px solid var(--color_tag_1);
+	padding: 0px 3px;
 }
 #tag_nav_2 {
     color: var(--color_tag_2);
 }
 #tag_nav_2:hover {
-    background-color: var(--color_tag_2);
-    color: #fff;
+	background-color: var(--bgd);
+	border-bottom: 3px solid var(--color_tag_2);
+	padding: 0px 3px;
 }
 #tag_nav_3 {
     color: var(--color_tag_3);
 }
 #tag_nav_3:hover {
-    color: #fff;
-    background-color: var(--color_tag_3);
+	background-color: var(--bgd);
+	border-bottom: 3px solid var(--color_tag_3);
+	padding: 0px 3px;
 }
 #tag_nav_4 {
     color: var(--color_tag_4);
 }
 #tag_nav_4:hover{
-	color: #fff;
-	background-color: var(--color_tag_4);
+	background-color: var(--bgd);
+	border-bottom: 3px solid var(--color_tag_4);
+	padding: 0px 3px;
 }
 
 
 #top-lines {
 	margin-top: 0px;
 	margin-bottom: 0px;
-	border-top: 1px solid var(--maincolor);
+	border-top: 1px solid #E3E3E3;
 }

@@ -5,7 +5,6 @@
     <div class="thumbnail-header">
       <a href="<%= blog_post_path(blog_post.id) %>">
         <img src="<%= image_path blog_post.img_path unless blog_post.img_path == nil %>" class="img-responsive"/>
-        <p><%= blog_post.title %></p>
       </a>
     </div>
       <div class="caption">
@@ -14,7 +13,7 @@
         <div class="row">
           <div class="col-xs-8">
             <% blog_post.tags.each do |tag| %>
-              <a href="<%= blog_posts_path(filter: tag.label) %>"><span class="badge"><%= tag.label %></span></a>
+              <a href="<%= blog_posts_path(filter: tag.label) %>"><span class="badge" style="background-color: var(--color_tag_<%= tag.id %>)"><%= tag.label %></span></a>
               <% end %>
           </div>
           <div class="col-xs-4 post_date text-right test">
