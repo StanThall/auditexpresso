@@ -1,0 +1,10 @@
+$(document).ready ->
+	$('a#btn_classement_up').click (event) ->
+		event.preventDefault()
+		$('a#btn_classement_up').fadeOut()
+		$.ajax
+	     type: 'get'
+	     url: '/cabinets/up/' + idf
+	     dataType: 'json'
+	     success: (json) ->
+	       $('td#rating_' + id ).html(json.rating)

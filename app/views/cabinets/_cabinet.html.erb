@@ -1,0 +1,7 @@
+<tr>
+<%= content_tag(:td,cabinet.rating, id: "rating_" << cabinet.id.to_s ) %>
+<td><%= cabinet.s_name %></td>
+<td><%= link_to content_tag(:i,"", class: "fa fa-arrow-circle-up "),up_cabinet_path(cabinet.id), class: "btn btn-default btn-xs", id: "btn_classement_up", remote: :true %>
+</td>
+<td><%= link_to content_tag(:i,"",class: "fa fa-arrow-circle-down"), down_cabinet_path(cabinet.id), class: "btn btn-default btn-xs", id: "btn_classement_down", remote: :true  %></td>
+</tr>

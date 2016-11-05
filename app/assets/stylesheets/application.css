@@ -178,3 +178,7 @@ body {
 	border-left: 1px solid var(--lines);
 }
 
+.lead#classement_caption{
+	text-align: center; 
+	margin-bottom: 10px;
+}
