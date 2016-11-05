@@ -15,11 +15,11 @@
  */
 
 :root {
-	--bgd: #F5F9FD;
+	--bgd: #fff;
 	--maincolor:#DA103B;
 	--color_tag_1: #FE4E00;
-	--color_tag_2: #FF0F80;
-	--color_tag_3: #541388;
+	--color_tag_2: #541388;
+	--color_tag_3: #FF0F80;
 	--color_tag_4: #0A7F08;
 }
 
@@ -44,6 +44,7 @@ body {
 
 .thumbnail {
 	border-radius: 0px;
+	border:0px;
 }
 .thumbnail .thumbnail-header > a > p {
 	color:var(--maincolor);
@@ -60,7 +61,7 @@ body {
 }
 
 .badge{
-	   background-color: var(--color_tag_<%= tag.id %>);
+	   
 }
 
 #bottom_row{
@@ -122,9 +123,56 @@ body {
 	padding: 0px 3px;
 }
 
-
 #top-lines {
 	margin-top: 0px;
 	margin-bottom: 0px;
 	border-top: 1px solid #E3E3E3;
 }
+
+.table#classement{
+	table-layout:fixed;
+	width:95%;
+	margin: 0px auto;
+	border-spacing: 0px;
+	text-align: center;
+	font-size: 0.9em;
+	word-wrap: normal;
+}
+.table#classement >tbody >tr >td{
+	padding: 2px;
+	vertical-align: middle;
+}
+.btn-default#btn_classement_up{
+	background-color: transparent;
+	border: 0px;
+	color:#68B166;	
+	font-size: 1.5em;
+	padding: 2px 2px; 
+	line-height: 1; 
+}
+.btn-default#btn_classement_down{
+	background-color: transparent;
+	border: 0px;
+	color:#DF990A;	
+	font-size: 1.5em;
+	padding: 2px 2px; 
+	line-height: 1; 
+}
+.btn-default#btn_classement_up:active {
+	background-color: #68B166 ;
+	border: 0px;
+	color: #fff;
+}
+.btn-default#btn_classement_down:active {
+	background-color: #DF990A;
+	border: 0px;
+	color: #fff;
+}
+.table#classement >tbody >tr >th{
+	text-align: center;
+}
+
+#display_div{
+	border-left: 1px solid #EEEEEE;
+}
+

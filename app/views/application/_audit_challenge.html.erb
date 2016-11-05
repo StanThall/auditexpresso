@@ -1,0 +1,26 @@
+<div class="thumbnail" style="padding: 10px 0px 0px 0px;">
+	<div class="alert"><%= flash.value %></div>
+	Quel cabinet monte ? Lequel descend ? Votez !
+	<hr/>
+		<table class="table" id="classement">
+			<col width="20%">
+			<col width="50%">
+			<col width="15%">
+			<col width="15%">
+			<tr>
+				<th>Points</th>
+				<th>Cabinet</th>
+				<th colspan="2" style="text-align: center;"">Votez!</th>
+			</tr>
+			<% Cabinet.all.sort_by{|cab| cab[:rating]}.reverse!.each do |cabinet| %>
+			<tr>
+				<td><%= cabinet.rating %></td>
+				<td><%= cabinet.s_name %></td>
+				<td><%= link_to "up", "/cabinets/1" %>
+				</td>
+				<td><%= link_to content_tag(:i,"",class: "fa fa-arrow-circle-down"), root_path, class: "btn btn-default btn-xs", id: "btn_classement_down"%></td>
+			</tr>
+			<% end %>
+		</table>
+</div>
+

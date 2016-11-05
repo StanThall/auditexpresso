@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  s_name: MyString
+  l_name: MyString
+  rating_integer: MyString
+
+two:
+  s_name: MyString
+  l_name: MyString
+  rating_integer: MyString
