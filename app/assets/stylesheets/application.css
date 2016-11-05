@@ -17,6 +17,7 @@
 :root {
 	--bgd: #fff;
 	--maincolor:#DA103B;
+	--lines: #EEEEEE;
 	--color_tag_1: #FE4E00;
 	--color_tag_2: #541388;
 	--color_tag_3: #FF0F80;
@@ -45,6 +46,7 @@ body {
 .thumbnail {
 	border-radius: 0px;
 	border:0px;
+	border-bottom: 1px solid var(--lines);
 }
 .thumbnail .thumbnail-header > a > p {
 	color:var(--maincolor);
@@ -126,7 +128,7 @@ body {
 #top-lines {
 	margin-top: 0px;
 	margin-bottom: 0px;
-	border-top: 1px solid #E3E3E3;
+	border-top: 1px solid var(--lines);
 }
 
 .table#classement{
@@ -173,6 +175,6 @@ body {
 }
 
 #display_div{
-	border-left: 1px solid #EEEEEE;
+	border-left: 1px solid var(--lines);
 }
 

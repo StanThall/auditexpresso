@@ -5,8 +5,5 @@ class Cabinet < ApplicationRecord
 		self.rating ||= 0
 	end
 
-	def up
-		self.rating +=1
-	end
 
 end

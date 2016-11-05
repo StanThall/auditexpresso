@@ -1,5 +1,7 @@
 <div class="thumbnail" style="padding: 10px 0px 0px 0px;">
-	<div class="alert"><%= flash.value %></div>
+	<% flash.each do |name, msg| %>
+		<%= alert_box msg, dismissible: :true %>
+	<% end %>
 	Quel cabinet monte ? Lequel descend ? Votez !
 	<hr/>
 		<table class="table" id="classement">
@@ -16,9 +18,9 @@
 			<tr>
 				<td><%= cabinet.rating %></td>
 				<td><%= cabinet.s_name %></td>
-				<td><%= link_to "up", "/cabinets/1" %>
+				<td><%= link_to content_tag(:i,"", class: "fa fa-arrow-circle-up "),up_cabinet_path(cabinet.id), class: "btn btn-default btn-xs", id: "btn_classement_up", remote: true %>
 				</td>
-				<td><%= link_to content_tag(:i,"",class: "fa fa-arrow-circle-down"), root_path, class: "btn btn-default btn-xs", id: "btn_classement_down"%></td>
+				<td><%= link_to content_tag(:i,"",class: "fa fa-arrow-circle-down"), down_cabinet_path(cabinet.id), class: "btn btn-default btn-xs", id: "btn_classement_down", remote: true %></td>
 			</tr>
 			<% end %>
 		</table>

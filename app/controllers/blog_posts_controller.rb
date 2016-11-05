@@ -4,6 +4,9 @@ class BlogPostsController < ApplicationController
   # GET /blog_posts
   # GET /blog_posts.json
   def index
+    
+    session[:a_vote_up] ||= false
+    session[:a_vote_down] ||= false
     if params[:filter].present?
       @blog_posts = BlogPost.filter(params[:filter]) 
     else
