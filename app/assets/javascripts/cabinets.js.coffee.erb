@@ -2,13 +2,14 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready ->
-	$('i.btn_classement_up').click (event) ->
-		event.preventDefault()
-		id = $(this).attr('id')
-		$('i.btn_classement_up').fadeOut()
- 		$.ajax
-  			type: 'put'
-			url: '/cabinets/up/'+id
-			dataType: 'json'
-			success: (json) ->
-   				$('td#rating_' + id ).text(json.rating).effect('highlight')
+ $('i.btn_classement_up').click (event) ->
+  event.preventDefault()
+  id = $(this).attr('id')
+  $('i.btn_classement_up').fadeOut()
+ 		
+  $.ajax
+   type: 'put'
+   url: '/cabinets/up/'+id
+   dataType: 'json'
+   success: (json) ->
+    $('td#rating_' + id ).text(json.rating).effect('highlight')
