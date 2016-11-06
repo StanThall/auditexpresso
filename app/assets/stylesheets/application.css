@@ -144,7 +144,7 @@ body {
 	padding: 2px;
 	vertical-align: middle;
 }
-.btn-default#btn_classement_up{
+.btn_classement_up, .btn_classement_up:hover{
 	background-color: transparent;
 	border: 0px;
 	color:#68B166;	
@@ -160,7 +160,7 @@ body {
 	padding: 2px 2px; 
 	line-height: 1; 
 }
-.btn-default#btn_classement_up:active {
+.btn_classement_up:active {
 	background-color: #68B166 ;
 	border: 0px;
 	color: #fff;
