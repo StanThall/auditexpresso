@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161104095033) do
+ActiveRecord::Schema.define(version: 20161107174806) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,9 +35,12 @@ ActiveRecord::Schema.define(version: 20161104095033) do
   create_table "cabinets", force: :cascade do |t|
     t.string   "s_name"
     t.string   "l_name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.integer  "rating"
+    t.integer  "rank_last"
+    t.datetime "rank_change_time"
+    t.integer  "rank_change"
   end
 
   create_table "tag_links", force: :cascade do |t|

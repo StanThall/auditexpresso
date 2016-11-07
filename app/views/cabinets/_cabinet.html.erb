@@ -1,6 +1,15 @@
 <tr id="cab_row">
 	<%= content_tag(:td,cabinet.rating, id: "rating_" << cabinet.id.to_s ) %>
-	<td><%= cabinet.s_name %></td>
+	<td>
+		<% if !cabinet.rank_change.nil? && cabinet.rank_change != 0 && cabinet.rank_change_time > 2.minutes.ago %>
+			<% if cabinet.rank_change == 1 %>
+				<%= content_tag :i, "", class: "fa fa-caret-up", style: "color: #68B166" %>
+			<% else %>
+				<%= content_tag :i, "", class: "fa fa-caret-down", style: "color: #DF990A" %>
+			<% end %>
+		<% end %>
+		<%= cabinet.s_name %>
+	</td>
 	<td id="vote_up_<%= cabinet.id.to_s %>">
 		<% if !session[:a_vote_up] %>
 			<i class= "btn btn_classement_up btn-xs" id= "<%= cabinet.id.to_s %>"> 
