@@ -141,32 +141,29 @@ body {
 	font-size: 0.9em;
 	word-wrap: normal;
 }
-.table#classement >tbody >tr >td{
-	padding: 2px;
+.table#classement >tbody >tr >td {
+	padding: 0px;
 	vertical-align: middle;
+	height: 31px;
 }
-.btn_classement_up, .btn_classement_up:hover{
+.btn_classement_up, .btn_classement_up:hover, .a_vote_up{
 	background-color: transparent;
 	border: 0px;
 	color:#68B166;	
 	font-size: 1.5em;
-	padding: 2px 2px; 
-	line-height: 1; 
 }
-.btn-default#btn_classement_down{
+.btn_classement_down, .btn_classement_down:hover, .a_vote_down{
 	background-color: transparent;
 	border: 0px;
 	color:#DF990A;	
 	font-size: 1.5em;
-	padding: 2px 2px; 
-	line-height: 1; 
 }
 .btn_classement_up:active {
 	background-color: #68B166 ;
 	border: 0px;
 	color: #fff;
 }
-.btn-default#btn_classement_down:active {
+.btn_classement_down:active {
 	background-color: #DF990A;
 	border: 0px;
 	color: #fff;

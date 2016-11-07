@@ -1,7 +1,7 @@
 <div class="thumbnail" style="padding: 10px 0px 0px 0px;" id="challenge">
-	<% flash.each do |name, msg| %>
-		<%= alert_box msg, dismissible: :true %>
-	<% end %>
+	
+	<%= alert_box('', id: "vote_alert", dismissible: :true) unless flash.empty? %>
+	
 	<div class="lead" id="classement_caption">Quel cabinet <span style="font-weight: bold; color:#68B166;">monte</span>?<br> Lequel <span style="font-weight: bold; color:#DF990A;">descend</span> ?<br> Votez !</div>
 		<table class="table" id="classement">
 			<col width="20%">

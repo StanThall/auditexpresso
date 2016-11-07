@@ -5,11 +5,29 @@ $(document).ready ->
  $('i.btn_classement_up').click (event) ->
   event.preventDefault()
   id = $(this).attr('id')
-  $('i.btn_classement_up').fadeOut()
- 		
+  		
   $.ajax
    type: 'put'
    url: '/cabinets/up/'+id
    dataType: 'json'
    success: (json) ->
-    $('td#rating_' + id ).text(json.rating).effect('highlight')
+    $('td#rating_' + id ).text(json.rating).parent().effect('highlight', {color: "#CCFBCE"} ,400)
+  
+  $('i.btn_classement_up').hide()
+  $('td#vote_up_'+id).html('<i class="glyphicon glyphicon-ok a_vote_up" />').show()
+
+
+
+ $('i.btn_classement_down').click (event) ->
+  event.preventDefault()
+  id = $(this).attr('id')
+  		
+  $.ajax
+   type: 'put'
+   url: '/cabinets/down/'+id
+   dataType: 'json'
+   success: (json) ->
+    $('td#rating_' + id ).text(json.rating).parent().effect('highlight', {color: "#F0C675"} ,400)
+  
+  $('i.btn_classement_down').hide()
+  $('td#vote_down_'+id).html('<i class="glyphicon glyphicon-ok a_vote_down" />').show()
