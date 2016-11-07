@@ -1,14 +1,22 @@
 <tr id="cab_row">
-<%= content_tag(:td,cabinet.rating, id: "rating_" << cabinet.id.to_s ) %>
-<td><%= cabinet.s_name %></td>
-<td id="vote_up_<%= cabinet.id.to_s %>">
-	<i class= "btn btn_classement_up btn-xs" id= "<%= cabinet.id.to_s %>"> 
-		<%=content_tag :i,"", class: "fa fa-arrow-circle-up "%> 
-	</i>
-</td>
-<td id="vote_down_<%= cabinet.id.to_s %>">
-	<i class= "btn btn_classement_down btn-xs" id= "<%= cabinet.id.to_s %>"> 
-		<%=content_tag :i,"", class: "fa fa-arrow-circle-down "%> 
-	</i>
-</td>
+	<%= content_tag(:td,cabinet.rating, id: "rating_" << cabinet.id.to_s ) %>
+	<td><%= cabinet.s_name %></td>
+	<td id="vote_up_<%= cabinet.id.to_s %>">
+		<% if !session[:a_vote_up] %>
+			<i class= "btn btn_classement_up btn-xs" id= "<%= cabinet.id.to_s %>"> 
+				<%=content_tag :i,"", class: "fa fa-arrow-circle-up "%> 
+			</i>
+		<% else %>
+			<%=content_tag :i,"", class: "glyphicon glyphicon-ok a_vote_up" if cabinet.id == session[:a_vote_up] %>
+		<% end %>
+	</td>
+	<td id="vote_down_<%= cabinet.id.to_s %>">
+		<% if !session[:a_vote_down] %>
+			<i class= "btn btn_classement_down btn-xs" id= "<%= cabinet.id.to_s %>"> 
+				<%=content_tag :i,"", class: "fa fa-arrow-circle-down "%> 
+			</i>
+		<% else %>
+			<%=content_tag :i,"", class: "glyphicon glyphicon-ok a_vote_down" if cabinet.id == session[:a_vote_down] %>
+		<% end %>
+	</td>
 </tr>
