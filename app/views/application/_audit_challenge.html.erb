@@ -14,7 +14,7 @@
 				<th colspan="2" style="text-align: center;"">Votez!</th>
 			</tr>
 			
-			<%= render Cabinet.all.sort_by{|cab| cab[:rating]}.reverse! %>
+			<%= render Cabinet.all.sort_by{|cab| [cab[:rating], cab[:s_name]]}.reverse! %>
 			
 		</table>
 </div>
