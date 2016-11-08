@@ -180,3 +180,11 @@ body {
 	text-align: center; 
 	margin-bottom: 10px;
 }
+
+.table_collapse_trigger {
+	text-align: center;
+	border-top: 1px solid var(--lines);
+}
+.table_collapse_trigger:hover, .table_collapse_trigger:active {
+	background-color: #FFFFF5;
+}
