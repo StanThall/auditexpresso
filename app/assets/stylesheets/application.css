@@ -24,9 +24,14 @@
 	--color_tag_3: #FF0F80;
 	--color_tag_4: #0A7F08;
 }
-
+html{
+	position:relative;
+	min-height: 100%;
+}
 body {
 	background-color: var(--bgd);
+	margin-bottom: 80px;
+	padding-bottom: 10px;
 }
 
 .navbar {
@@ -39,9 +44,13 @@ body {
 }
 
 #TheFooter {
+	position: absolute;
+	bottom:0;
+	width: 100%;
 	background-color: var(--maincolor);
 	color: #fff;
 	padding: 10px;
+	height: 80px;
 }
 
 .thumbnail {
