@@ -13,6 +13,7 @@ $(document).on "turbolinks:load", ->
    dataType: 'json'
    success: (json) ->
     $('td#rating_' + id ).text(json.rating).parent().effect('highlight', {color: "#CCFBCE"} ,400)
+    $('div#notice_here').html('<div class="alert alert-success alert-dismissible" role="alert" style="text-align:center;"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>A voté !</div>')
   
   $('i.btn_classement_up').hide()
   $('td#vote_up_'+id).html('<i class="glyphicon glyphicon-ok a_vote_up" />').show()
@@ -29,6 +30,7 @@ $(document).on "turbolinks:load", ->
    dataType: 'json'
    success: (json) ->
     $('td#rating_' + id ).text(json.rating).parent().effect('highlight', {color: "#F0C675"} ,400)
+    $('div#notice_here').html('<div class="alert alert-success alert-dismissible" role="alert" style="text-align:center;"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>A voté !</div>')
   
   $('i.btn_classement_down').hide()
   $('td#vote_down_'+id).html('<i class="glyphicon glyphicon-ok a_vote_down" />').show()
