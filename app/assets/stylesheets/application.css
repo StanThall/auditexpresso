@@ -67,8 +67,13 @@ body {
 	word-wrap: normal;
 	font-weight: bold;
 }
-
-.post_date {
+.thumbnail .caption {
+	padding: 2px 0px 2px 0px;
+}
+.thumbnail .caption > p{
+	margin-bottom: 5px;
+}
+.post_date, .post_author {
 	color: #989799;
 }
 

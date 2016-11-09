@@ -12,7 +12,7 @@
 				<th colspan="2" style="text-align: center;"">Votez!</th>
 			</tr>
 			
-			<%= render Cabinet.all.sort_by{|cab| [cab[:rating], cab[:s_name]]}.reverse! %>
+			<%= render Cabinet.order('rating DESC, s_name')%>
 			
 		</table>
 	<div class="table_collapse_trigger" data-toggle="collapse" data-target=".collapsable_row" id="Afficher moins de cabinets" onclick="var txt; var id; txt = $('div.table_collapse_trigger').text(); id = $('div.table_collapse_trigger').attr('id');$('div.table_collapse_trigger').text(id); $('div.table_collapse_trigger').attr('id',txt);">Afficher plus de cabinets</div>
