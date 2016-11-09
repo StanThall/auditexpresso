@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :strips
   resources :blog_posts
   resources :tags
 

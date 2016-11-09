@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @strip.title %>
+</p>
+
+<p>
+  <strong>Catch:</strong>
+  <%= @strip.catch %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @strip.content %>
+</p>
+
+<%= link_to 'Edit', edit_strip_path(@strip) %> |
+<%= link_to 'Back', strips_path %>
