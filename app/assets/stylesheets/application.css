@@ -30,7 +30,7 @@ html{
 }
 body {
 	background-color: var(--bgd);
-	margin-bottom: 80px;
+	margin-bottom: 100px;
 	padding-bottom: 10px;
 }
 
@@ -49,9 +49,10 @@ body {
 	width: 100%;
 	background-color: var(--maincolor);
 	color: #fff;
-	padding: 10px;
 	height: 100px;
+	padding-top: 10px;
 }
+
 
 .thumbnail {
 	border-radius: 0px;
@@ -73,12 +74,37 @@ body {
 .thumbnail .caption > p{
 	margin-bottom: 5px;
 }
-.post_date, .post_author {
-	color: #989799;
+
+#it_is_known{
+	width: 95%;
+	margin: 0px auto;
 }
 
-.badge{
-	   
+.strip {
+	margin: 5px 0px;
+	font-size: 0.9em;
+	border-bottom: 1px solid var(--lines);
+	height: 40px;
+	padding: 0px 4px;
+	display: table;
+	width:100%;
+}
+
+.strip > span {
+	display: table-cell;
+	vertical-align: middle;
+	height: 100%;
+
+}
+
+.strip:hover{
+	background-color: var(--maincolor);
+	color:#fff;
+	cursor:pointer;
+}
+
+.post_date, .post_author {
+	color: #989799;
 }
 
 #bottom_row{
@@ -190,7 +216,7 @@ body {
 	border-left: 1px solid var(--lines);
 }
 
-.lead#classement_caption{
+#classement_caption{
 	text-align: center; 
 	margin-bottom: 10px;
 }
@@ -200,5 +226,7 @@ body {
 	border-top: 1px solid var(--lines);
 }
 .table_collapse_trigger:hover, .table_collapse_trigger:active {
-	background-color: #FFFFF5;
+	background-color: var(--maincolor);
+	color: #fff;
+	cursor: pointer;
 }

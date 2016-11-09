@@ -5,7 +5,7 @@ class BlogPost < ApplicationRecord
 
 	
 	scope :filter, ->(label){joins(:tags).where(tags: {label: label})}
-
+	
 
 
 
