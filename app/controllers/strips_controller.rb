@@ -4,12 +4,13 @@ class StripsController < ApplicationController
   # GET /strips
   # GET /strips.json
   def index
-    @strips = Strip.all
+    @strips = Strip.order('created_at DESC')
   end
 
   # GET /strips/1
   # GET /strips/1.json
   def show
+    @strips=Strip.order('created_at DESC')
   end
 
   # GET /strips/new

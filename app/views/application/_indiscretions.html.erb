@@ -1,9 +1,11 @@
 <div id="indiscretions">
-	<p class="lead" style="text-align: center;border-bottom: 1px solid var(--lines);font-weight: bold;padding-bottom: 10px;margin-bottom:5px;">
-		<%= content_tag(:i,"",class: "fa fa-user-secret") %>
-		Indiscrétions
-	</p>
+	<a href="<%= strips_path %>" class="striplist">
+		<p class="lead" style="text-align: center;border-bottom: 1px solid var(--lines);font-weight: bold;padding-bottom: 10px;margin-bottom:5px;">
+			<%= content_tag(:i,"",class: "fa fa-user-secret") %>
+			Indiscrétions
+		</p>
+	</a>
 	<%= render Strip.index_pg %>
 
-	<div class="indiscretions_collapse_trigger" data-toggle="collapse" data-target=".collapsable_strip" id="Afficher moins d'indiscrétions" onclick="var txt; var id; txt = $('div.indiscretions_collapse_trigger').text(); id = $('div.indiscretions_collapse_trigger').attr('id');$('div.indiscretions_collapse_trigger').text(id); $('div.indiscretions_collapse_trigger').attr('id',txt);">Afficher plus d'indiscrétions</div>
+	<div class="indiscretions_collapse_trigger" data-toggle="collapse" data-target=".collapsable_strip" id='<span class="fa fa-caret-up"></span> &nbsp;Afficher moins&nbsp; <span class="fa fa-caret-up"></span>' onclick="var txt; var id; txt = $('div.indiscretions_collapse_trigger').html(); id = $('div.indiscretions_collapse_trigger').attr('id');$('div.indiscretions_collapse_trigger').html(id); $('div.indiscretions_collapse_trigger').attr('id',txt);"><span class="fa fa-caret-down"></span> &nbsp;Afficher plus&nbsp; <span class="fa fa-caret-down"></span></div>
 </div>

@@ -20,6 +20,6 @@
 			<%= render Cabinet.order('rating DESC, s_name')%>
 			
 		</table>
-	<div class="table_collapse_trigger" data-toggle="collapse" data-target=".collapsable_row" id="Afficher moins de cabinets" onclick="var txt; var id; txt = $('div.table_collapse_trigger').text(); id = $('div.table_collapse_trigger').attr('id');$('div.table_collapse_trigger').text(id); $('div.table_collapse_trigger').attr('id',txt);">Afficher plus de cabinets</div>
+	<div class="table_collapse_trigger" data-toggle="collapse" data-target=".collapsable_row" id='<span class="fa fa-caret-up"></span> &nbsp;Afficher moins&nbsp; <span class="fa fa-caret-up"></span>' onclick="var txt; var id; txt = $('div.table_collapse_trigger').html(); id = $('div.table_collapse_trigger').attr('id');$('div.table_collapse_trigger').html(id); $('div.table_collapse_trigger').attr('id',txt);"><span class="fa fa-caret-down"></span> &nbsp;Afficher plus&nbsp; <span class="fa fa-caret-down"></span></div>
 </div>
 

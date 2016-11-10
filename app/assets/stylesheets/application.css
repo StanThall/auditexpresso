@@ -53,7 +53,6 @@ body {
 	padding-top: 10px;
 }
 
-
 .thumbnail {
 	border-radius: 0px;
 	border:0px;
@@ -81,8 +80,14 @@ body {
 	padding: 0px 4px;
 }
 
-.uncollapsed_strip, .strip.collapse.in {
-	margin: 5px 0px;
+a.striplist:hover {
+	text-decoration: none;
+}
+a.striplist{
+	color: black;
+}
+
+.uncollapsed_strip, .collapsable_strip.collapse.in {
 	font-size: 0.9em;
 	border-bottom: 1px solid var(--lines);
 	padding: 0px 4px;
@@ -93,17 +98,26 @@ body {
 	vertical-align: middle;
 }
 
-
-
-.strip > a {
-	display: table-cell;
-	vertical-align: middle;
+.indiscretions_collapse_trigger {
+	border-bottom: 1px solid var(--lines);
+	padding: 2px 0px;
+	text-align: center;
 }
 
-.strip:hover{
+.collapsable_strip > p, .uncollapsed_strip > p {
+	display: table-cell;
+	vertical-align: middle;
+	color: black;
+}
+
+.collapsable_strip:hover, .uncollapsed_strip:hover{
 	background-color: var(--maincolor);
 	color:#fff;
 	cursor:pointer;
+}
+
+.collapsable_strip:hover > p , .uncollapsed_strip:hover > p {
+	color:#fff;
 }
 
 .post_date, .post_author {
@@ -228,8 +242,10 @@ body {
 	text-align: center;
 	border-top: 1px solid var(--lines);
 }
-.table_collapse_trigger:hover, .table_collapse_trigger:active {
+.table_collapse_trigger:hover, .table_collapse_trigger:active, .indiscretions_collapse_trigger:hover, .indiscretions_collapse_trigger:active {
 	background-color: var(--maincolor);
 	color: #fff;
 	cursor: pointer;
 }
+
+

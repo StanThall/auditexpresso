@@ -1,19 +1,40 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @strip.title %>
+<p class="lead" style="text-align: center;font-weight: bold;margin-bottom:5px;font-size: 2em;">
+	<%= content_tag(:i,"",class: "fa fa-user-secret") %>
+	Indiscrétions
 </p>
+<hr style="border: 2px solid var(--maincolor);margin: 5px 0px 10px 0px;">
+<div class="panel-group" id="accordion" role="tablist">
+	<div class="panel panel-default" id="panel-strip">
+		<a data-toggle="collapse" data-parent="#accordion" href="#collapse_<%= @strip.id %>" >
+		    <div class="panel-heading" role="tab" id="headingOne">
+		      <h4 class="panel-title">
+		          <%= @strip.title %>
+		      </h4>
+		    </div>
+	    </a>
+    <div id="collapse_<%= @strip.id %>" class="panel-collapse collapse in" role="tabpanel">
+      <div class="panel-body">
+        <%= @strip.content %>
+      </div>
+    </div>
+  </div>
+	<% @strips.reject{|s| s.id == @strip.id}.each do |s| %>
+	  <div class="panel panel-default" id="panel-strip">
+	    <a data-toggle="collapse" data-parent="#accordion" href="#collapse_<%= s.id %>" >
+		    <div class="panel-heading" role="tab" id="heading_<%= s.id %>" >
+		      <h4 class="panel-title">
+		          <%= s.title %>
+		      </h4>
+		    </div>
+	    </a>
+	    <div id="collapse_<%= s.id %>" class="panel-collapse collapse" role="tabpanel">
+	      <div class="panel-body">
+	        <%= s.content %>
+	      </div>
+	    </div>
+	  </div>
+  <% end %>
+</div>
 
-<p>
-  <strong>Catch:</strong>
-  <%= @strip.catch %>
-</p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @strip.content %>
-</p>
-
-<%= link_to 'Edit', edit_strip_path(@strip) %> |
-<%= link_to 'Back', strips_path %>
