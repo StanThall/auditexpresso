@@ -4,8 +4,8 @@ class BlogPost < ApplicationRecord
 	has_many :tags, through: :tag_links
 
 	
-	scope :filter, ->(label){joins(:tags).where(tags: {label: label})}
-	
+	scope :filter_tag, ->(label){joins(:tags).where(tags: {label: label})}
+	scope :filter_author, ->(nme){joins(:author).where(authors: {name: nme})}
 
 
 

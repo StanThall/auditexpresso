@@ -8,12 +8,12 @@
       </a>
     </div>
       <div class="caption">
-        <a class="post_author" href="<%= blog_posts_path(scoop: blog_post.author.name) %>">Par <%= blog_post.author.name %></a>
+        <a class="post_author" href="<%= blog_posts_path(filter_author: blog_post.author.name) %>">Par <%= blog_post.author.name %></a>
         <p class="lead"><%= blog_post.catchphrase %></p>
         <div class="row">
           <div class="col-xs-8">
             <% blog_post.tags.each do |tag| %>
-              <a href="<%= blog_posts_path(filter: tag.label) %>"><span class="badge" style="background-color: var(--color_tag_<%= tag.id %>)"><%= tag.label %></span></a>
+              <a href="<%= blog_posts_path(filter_tag: tag.label) %>"><span class="badge" style="background-color: var(--color_tag_<%= tag.id %>)"><%= tag.label %></span></a>
               <% end %>
           </div>
           <div class="col-xs-4 post_date text-right test">

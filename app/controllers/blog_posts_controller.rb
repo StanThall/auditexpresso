@@ -7,8 +7,10 @@ class BlogPostsController < ApplicationController
     
     session[:a_vote_up] ||= false
     session[:a_vote_down] ||= false
-    if params[:filter].present?
-      @blog_posts = BlogPost.filter(params[:filter]) 
+    if params[:filter_tag].present?
+      @blog_posts = BlogPost.filter_tag(params[:filter_tag]) 
+    elsif params[:filter_author].present?
+      @blog_posts = BlogPost.filter_author(params[:filter_author])
     else
       @blog_posts = BlogPost.all
     end
