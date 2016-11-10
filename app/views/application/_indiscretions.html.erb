@@ -3,6 +3,7 @@
 		<%= content_tag(:i,"",class: "fa fa-user-secret") %>
 		Indiscrétions
 	</p>
-	<%= render Strip.all.order("created_at DESC").limit(10) %>
+	<%= render Strip.index_pg %>
+
 	<div class="indiscretions_collapse_trigger" data-toggle="collapse" data-target=".collapsable_strip" id="Afficher moins d'indiscrétions" onclick="var txt; var id; txt = $('div.indiscretions_collapse_trigger').text(); id = $('div.indiscretions_collapse_trigger').attr('id');$('div.indiscretions_collapse_trigger').text(id); $('div.indiscretions_collapse_trigger').attr('id',txt);">Afficher plus d'indiscrétions</div>
 </div>

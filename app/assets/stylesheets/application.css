@@ -81,7 +81,7 @@ body {
 	padding: 0px 4px;
 }
 
-.strip.collapse.in {
+.uncollapsed_strip, .strip.collapse.in {
 	margin: 5px 0px;
 	font-size: 0.9em;
 	border-bottom: 1px solid var(--lines);

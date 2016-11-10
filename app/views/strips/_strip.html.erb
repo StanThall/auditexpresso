@@ -1,3 +1,3 @@
-<%= content_tag(:div, content_tag(:a, strip.catch,href:strip_path(strip.id)), class:"collapse collapsable_strip strip") %>
+<%= content_tag(:div, content_tag(:a, strip.catch,href:strip_path(strip.id)), class: if Strip.index_pg.last(5).include?(strip); "collapse collapsable_strip strip"; else; "uncollapsed_strip"; end)  %>
 
 
