@@ -75,26 +75,29 @@ body {
 	margin-bottom: 5px;
 }
 
-#it_is_known{
+#indiscretions{
 	width: 95%;
 	margin: 0px auto;
+	padding: 0px 4px;
 }
 
-.strip {
+.strip.collapse.in {
 	margin: 5px 0px;
 	font-size: 0.9em;
 	border-bottom: 1px solid var(--lines);
-	height: 40px;
 	padding: 0px 4px;
-	display: table;
+	height: 40px;
 	width:100%;
+	line-height: 100%;
+	display:table;
+	vertical-align: middle;
 }
 
-.strip > span {
+
+
+.strip > a {
 	display: table-cell;
 	vertical-align: middle;
-	height: 100%;
-
 }
 
 .strip:hover{
