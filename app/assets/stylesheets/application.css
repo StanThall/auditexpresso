@@ -248,4 +248,10 @@ a.striplist{
 	cursor: pointer;
 }
 
-
+#indiscretions > button {
+	position: relative;
+	width: 100%;
+	margin-top: 5px;
+	background-color: var(--maincolor);
+	border: 1px solid #9E2634;
+}

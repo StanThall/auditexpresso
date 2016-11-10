@@ -7,6 +7,9 @@ div#panel-strip{
 
 	a{color: black;text-decoration:none;}
 	a:hover, a:active, a:focus{text-decoration:none;}
+
 	.panel-heading{background-color: #fff;}
-	.panel-body{border-top:1px solid var(--lines);}
+	.panel-heading:hover{background-color: var(--maincolor);color: #fff;}
+	.panel-title{font-size: 1em;font-weight: bold;};
+	.panel-body{border-top:1px solid var(--lines);background-color: #B73F48;}
 }

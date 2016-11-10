@@ -1,10 +1,15 @@
 <% @title=@blog_post.title %>
-<div class="thumbnail">
+<div class="row">
   <img src="<%= image_path @blog_post.img_path unless @blog_post.img_path == nil %>" class="img-responsive"/>
-  <div class="caption">
-    <p class="lead"><%= @blog_post.catchphrase %></p>
-    <hr/>
-    <p><%= @blog_post.content %></p>
-    <%= link_to "Retour", root_path, class: "btn btn-primary" %>
+ </div>
+ <div class="row">
+	<div class="col-md-10" style="padding: 0px 5px 0px 0px;border-right: 1px solid var(--lines);  ">
+		<p><%= @blog_post.content %></p>
+	</div>
+	<div class="col-md-2" style="padding: 0px 0px 0px 2px;">
+		<div style="text-align: center;">
+			<p style="color: var(--maincolor);margin-bottom: 5px;">Pour écouter en musique</p>
+			<iframe src="https://embed.spotify.com/?uri=spotify%3Atrack%3A2cHQAKCDNoEob1XpdNC5o0" width="100%" height="200" frameborder="0" allowtransparency="true"></iframe>
+		</div>
+	</div>
   </div>
-</div>
