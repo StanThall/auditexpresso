@@ -3,6 +3,7 @@ class BlogPost < ApplicationRecord
 	has_many :tag_links
 	has_many :tags, through: :tag_links
 	accepts_nested_attributes_for :author
+	accepts_nested_attributes_for :tags
 
 	
 	scope :filter_tag, ->(label){joins(:tags).where(tags: {label: label})}

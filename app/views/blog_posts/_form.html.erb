@@ -35,6 +35,11 @@
     <%= f.label :author_id, "Auteur" %>
     <%= f.collection_select :author_id, Author.all ,:id, :name, prompt: true %>
   </div>
+
+  <div>
+    <%= f.label :tags %>
+    <%= f.collection_check_boxes :tag_ids, Tag.all, :id, :label, pormpt: true %>
+  </div>
   
 
   <div class="actions">
