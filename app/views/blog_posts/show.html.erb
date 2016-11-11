@@ -4,7 +4,7 @@
  </div>
  <div class="row" style="margin-top: 10px;">
 	<div class="col-md-9" style="padding: 15px;border-right: 2px solid var(--lines);">
-		<p><%= @blog_post.content %></p>
+		<p><%= raw(@blog_post.content) %></p>
 	</div>
 	<div class="col-md-3" style="padding: 0px 0px 0px 5px;">
 		
@@ -12,7 +12,7 @@
 			<p style="margin: 0px;font-weight: bold;"><i class="fa fa-headphones"></i> Pour lire en musique<br/>
 			<hr style="border: 1.5px solid var(--maincolor);margin:5px 0px;"/>
 			</p>
-			<iframe src="https://embed.spotify.com/?uri=spotify%3Atrack%3A2cHQAKCDNoEob1XpdNC5o0" width="100%" height="60x" frameborder="0" allowtransparency="true"></iframe>
+			<iframe src="https://embed.spotify.com/?uri=spotify%3Atrack%3A2cHQAKCDNoEob1XpdNC5o0" width="100%" height="80px;" frameborder="0" allowtransparency="true"></iframe>
 		</div>
 		<div style="text-align: center;">
 			<p style="margin: 0px;margin-top: 10px;font-weight: bold;"><i class="fa fa-rocket"></i> Pour aller plus loin<br/>
