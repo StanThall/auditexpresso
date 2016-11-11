@@ -21,6 +21,7 @@ class BlogPostsController < ApplicationController
   # GET /blog_posts/1
   # GET /blog_posts/1.json
   def show
+    render 'show', layout: 'blogview'
   end
 
   # GET /blog_posts/new
@@ -36,7 +37,6 @@ class BlogPostsController < ApplicationController
   # POST /blog_posts.json
   def create
     @blog_post = BlogPost.new(blog_post_params)
-
     respond_to do |format|
       if @blog_post.save
         format.html { redirect_to @blog_post, notice: 'Blog post was successfully created.' }
@@ -80,6 +80,6 @@ class BlogPostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_post_params
-      params.require(:blog_post).permit(:title, :catchphrase, :img_path, :content, :author, :subject)
+      params.require(:blog_post).permit(:title, :catchphrase, :img_path, :content, :author_id)
     end
 end

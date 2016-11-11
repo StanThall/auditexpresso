@@ -27,19 +27,15 @@
   </div>
 
   <div class="field">
-    <%= f.label :content %>
+    <%= f.label :content%>
     <%= f.text_area :content %>
   </div>
-
-  <div class="field">
-    <%= f.label :author %>
-    <%= f.text_field :author %>
+  
+  <div>
+    <%= f.label :author_id, "Auteur" %>
+    <%= f.collection_select :author_id, Author.all ,:id, :name, prompt: true %>
   </div>
-
-  <div class="field">
-    <%= f.label :subject %>
-    <%= f.text_field :subject %>
-  </div>
+  
 
   <div class="actions">
     <%= f.submit %>

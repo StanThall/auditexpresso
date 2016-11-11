@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= "NLC - " << @title.to_s || "Nous les Cac" %></title>
+    <title><%= "NLC - " << @title || "Nous les Cac" %></title>
     <%= csrf_meta_tags %>
 	<%= stylesheet_link_tag bootstrap_css %>
 	<%= stylesheet_link_tag font_awesome_css %>
@@ -11,21 +11,14 @@
   </head>
 
   <body>
-    <%= render "navbar" %>
+    <%= render "application/navbar" %>
     <div class="container">
 
-
-        <div class="col-md-3 hidden-sm hidden-xs">
-        <%= render "sidebar" %>
-        </div>
-
-        <div class="col-md-9 col-xs-12 col-sm-12" id="display_div">
           <%= yield %>
-        </div>
 
     </div>
   
-    <%= render "footer" %>
+    <%= render "application/footer" %>
 
     <%= javascript_include_tag bootstrap_js %>
   </body>
