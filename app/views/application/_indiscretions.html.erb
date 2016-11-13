@@ -1,4 +1,24 @@
 <div id="indiscretions">
+
+	<div class="modal fade" id="indiscretion_modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h5 class="modal-title" id="myModalLabel">Une indiscrétion à partager avec nous ?</h5>
+        </div>
+        <div class="modal-body">
+          ...
+          <br>Vous pouvez aussi écrire à chut@nouslescac.fr
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Envoyer !</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 	<a href="<%= strips_path %>" class="striplist">
 		<p class="lead" style="text-align: center;border-bottom: 1px solid var(--lines);font-weight: bold;padding-bottom: 10px;margin-bottom:5px;">
 			<%= content_tag(:i,"",class: "fa fa-user-secret") %>
@@ -8,5 +28,9 @@
 	<%= render Strip.index_pg %>
 
 	<div class="indiscretions_collapse_trigger" data-toggle="collapse" data-target=".collapsable_strip" id='<span class="fa fa-caret-up"></span> &nbsp;Afficher moins&nbsp; <span class="fa fa-caret-up"></span>' onclick="var txt; var id; txt = $('div.indiscretions_collapse_trigger').html(); id = $('div.indiscretions_collapse_trigger').attr('id');$('div.indiscretions_collapse_trigger').html(id); $('div.indiscretions_collapse_trigger').attr('id',txt);"><span class="fa fa-caret-down"></span> &nbsp;Afficher plus&nbsp; <span class="fa fa-caret-down"></span></div>
-	<button type="button" class="btn btn-primary btn-xs">Transmettre une indiscretion</button>
+
+	<button type="button" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#indiscretion_modal" style="font-size: 0.8em;">Quelque-chose à nous chuchoter ?</button>
+
+
+
 </div>

@@ -4,7 +4,7 @@
 
 div#panel-strip{
 	border-radius: 0px;
-
+	margin-top: 10px;
 	a{color: black;text-decoration:none;}
 	a:hover, a:active, a:focus{text-decoration:none;}
 
@@ -12,4 +12,17 @@ div#panel-strip{
 	.panel-heading:hover{background-color: var(--maincolor);color: #fff;}
 	.panel-title{font-size: 1em;font-weight: bold;};
 	.panel-body{border-top:1px solid var(--lines);}
+}
+
+#indiscretions > button {
+	position: relative;
+	width: 100%;
+	margin-top: 5px;
+	background-color: var(--maincolor);
+	border: 1px solid #9E2634;
+	
+}
+
+#indiscretions > button:active, #indiscretions > button:focus {
+	outline: 5px auto var(--color_tag_1);
 }
