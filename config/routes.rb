@@ -7,6 +7,7 @@ Rails.application.routes.draw do
 
   put 'cabinets/up/:id' =>'cabinets#up', as: 'up_cabinet'
   put 'cabinets/down/:id' =>'cabinets#down', as: 'down_cabinet'
+  post 'strips/collect' => 'strips#collect', as: 'collect_strip'
   
   root 'blog_posts#index'
 end

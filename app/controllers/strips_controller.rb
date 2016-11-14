@@ -62,6 +62,14 @@ class StripsController < ApplicationController
     end
   end
 
+  # Post /strips/collect
+  def collect
+    content = params[:content]
+    IndiscretionMailer.indiscretion_collect(content).deliver_now
+    flash[:notice] = "Merci de l'info !"
+    redirect_to root_path
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_strip
