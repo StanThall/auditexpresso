@@ -39,10 +39,6 @@ body {
 	border-color: var(--bgd);
 }
 
-.PostArea .col-sm-6{
-	padding:3px;
-}
-
 #TheFooter {
 	position: absolute;
 	bottom:0;
@@ -51,27 +47,6 @@ body {
 	color: #fff;
 	height: 100px;
 	padding-top: 10px;
-}
-
-.thumbnail {
-	border-radius: 0px;
-	border:0px;
-	border-bottom: 1px solid var(--lines);
-}
-.thumbnail .thumbnail-header > a > p {
-	color:var(--maincolor);
-	position: absolute;
-	left:5%;
-	top:5%;
-	font-size: 3em;
-	word-wrap: normal;
-	font-weight: bold;
-}
-.thumbnail .caption {
-	padding: 2px 0px 2px 0px;
-}
-.thumbnail .caption > p{
-	margin-bottom: 5px;
 }
 
 #indiscretions{
@@ -85,6 +60,13 @@ a.striplist:hover {
 }
 a.striplist{
 	color: black;
+}
+
+#challenge{
+	padding: 10px 0px 0px 0px;
+	border-radius: 0px;
+	border:0px;
+	border-bottom: 1px solid var(--lines);
 }
 
 .uncollapsed_strip, .collapsable_strip.collapse.in {
@@ -120,9 +102,6 @@ a.striplist{
 	color:#fff;
 }
 
-.post_date, .post_author {
-	color: #989799;
-}
 
 #bottom_row{
 	/* background-color: #451475;

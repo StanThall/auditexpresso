@@ -1,6 +1,6 @@
 <div class="PostArea">
 <% @blog_posts.order('created_at DESC, updated_at DESC').each do |blog_post| %>
-  <div class="col-sm-6">
+  <div class="col-md-6  col-sm-12 col-xs-12">
     <div class="thumbnail">
     <div class="thumbnail-header">
       <a href="<%= blog_post_path(blog_post.id) %>">
@@ -9,7 +9,7 @@
     </div>
       <div class="caption">
         <a class="post_author" href="<%= blog_posts_path(filter_author: blog_post.author.name) %>">Par <%= blog_post.author.name %></a>
-        <p class="lead"><%= blog_post.catchphrase %></p>
+        <p class="lead" style="height:60px;"><%= blog_post.catchphrase %></p>
         <div class="row">
           <div class="col-xs-8">
             <% blog_post.tags.each do |tag| %>

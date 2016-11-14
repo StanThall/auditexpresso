@@ -2,3 +2,36 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.PostArea{ 
+	
+	.col-sm-6{
+	padding:3px;
+	}
+	.thumbnail {
+		border-radius: 0px;
+		border:0px;
+		border-bottom: 1px solid var(--lines);
+	}
+	.thumbnail .thumbnail-header > a > p {
+		color:var(--maincolor);
+		position: absolute;
+		left:5%;
+		top:5%;
+		font-size: 3em;
+		word-wrap: normal;
+		font-weight: bold;
+	}
+	.thumbnail .caption {
+		padding: 2px 0px 2px 0px;
+	}
+	.thumbnail .caption > p{
+		margin-bottom: 5px;
+	}
+
+	.post_date, .post_author {
+		color: #989799;
+	}
+
+}
+
+
