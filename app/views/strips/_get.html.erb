@@ -1,6 +1,11 @@
 <%= form_tag({controller: "strips", action: "collect", method: "put", class: "nifty_form"}, remote: true) %>
 
 	<div id="indiscretion_notice"></div>
+	<div style="text-align: center;font-size: 0.9em;">
+		<p>Des <span style="color:var(--maincolor);"><b>informations</b></span> sur ce qu'il se passe derrière la façade d'un cabinet ?</p>
+		<p><span style="color:var(--maincolor);"><b>Décrivez-les</b></span>  ci-dessous, en précisant - si vous le souhaitez - les informations permettant de vous contacter</p>
+		<p>Vous pouvez aussi nous écrire à <span style="color:var(--maincolor);"><b>chut[at]nouslescac.fr</b></span></p>
+	</div>
 
 	<div class="field">
 		<%= text_area_tag :content, nil , id: "indiscretion_form_text" %>
