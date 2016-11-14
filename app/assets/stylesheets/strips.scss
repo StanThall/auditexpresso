@@ -20,9 +20,31 @@ div#panel-strip{
 	margin-top: 5px;
 	background-color: var(--maincolor);
 	border: 1px solid #9E2634;
-	
+	font-size: 0.8em;
 }
 
 #indiscretions > button:active, #indiscretions > button:focus {
 	outline: 5px auto var(--color_tag_1);
+}
+
+#indiscretion_form_text {
+	width: 100%;
+}
+
+#indiscretion_form_send {
+	position: relative;
+	width: 100%;
+	margin-top: 5px;
+	color: #fff;
+	background-color: var(--maincolor);
+	border: 1px solid #9E2634;
+	font-size: 0.9em;
+	border-radius: 3px;
+	max-height: 20px;
+	padding: 0px;
+	vertical-align: center;
+}
+
+#indiscretions #indiscretion_collect_form {
+	margin-top: 10px;
 }

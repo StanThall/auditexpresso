@@ -66,8 +66,6 @@ class StripsController < ApplicationController
   def collect
     content = params[:content]
     IndiscretionMailer.indiscretion_collect(content).deliver_now
-    flash[:notice] = "Merci de l'info !"
-    redirect_to root_path
   end
 
   private
