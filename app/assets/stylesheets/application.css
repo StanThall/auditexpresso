@@ -38,12 +38,17 @@ body {
   .container {
     width: 100%;
   }
+html {
+	font-size: 16px;
+}
+
 }
 
 @media (min-width: 992px) {
   .container {
     width: 970px;
   }
+  html {font-size: 10px;}
 }
 
 @media (min-width: 1200px) {
@@ -89,7 +94,7 @@ a.striplist{
 }
 
 .uncollapsed_strip, .collapsable_strip.collapse.in {
-	font-size: 0.9em;
+	font-size: 1.2rem;
 	border-bottom: 1px solid var(--lines);
 	padding: 0px 4px;
 	height: 40px;
@@ -144,7 +149,7 @@ a.striplist{
 .nav>li>a {
     color: var(--maincolor);
     padding: 3px 3px;
-    font-size: 1.3em;
+    font-size: 2rem;
     font-weight: bold;
 }
 
@@ -193,7 +198,7 @@ a.striplist{
 	margin: 0px auto;
 	border-spacing: 0px;
 	text-align: center;
-	font-size: 0.9em;
+	font-size: 1.2rem;
 	word-wrap: normal;
 }
 .table#classement >tbody >tr >td {
@@ -205,13 +210,13 @@ a.striplist{
 	background-color: transparent;
 	border: 0px;
 	color:#68B166;	
-	font-size: 1.5em;
+	font-size: 2rem;
 }
 .btn_classement_down, .btn_classement_down:hover, .a_vote_down{
 	background-color: transparent;
 	border: 0px;
 	color:#DF990A;	
-	font-size: 1.5em;
+	font-size: 2rem;
 }
 .btn_classement_up:active {
 	background-color: #68B166 ;
