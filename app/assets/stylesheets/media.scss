@@ -1,0 +1,34 @@
+@media (min-width: 320px) {
+  .container {
+    width: 95%;
+    font-size: 1.8vmax;
+  }
+
+  .lead {
+    font-size: 2vmax;
+  }
+
+  .PostArea .thumbnail .caption > p {
+    height: 90px;
+  }
+
+  .PostArea .badge {
+    font-size: 1.6vmax;
+  }
+
+  #TheFooter {
+  height: 200px;
+}
+
+  #top_row{
+  height: 120px;
+  }
+
+}
+
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}

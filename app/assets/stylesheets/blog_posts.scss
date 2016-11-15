@@ -17,15 +17,16 @@
 		position: absolute;
 		left:5%;
 		top:5%;
-		font-size: 3em;
+		font-size: 3rem;
 		word-wrap: normal;
 		font-weight: bold;
 	}
 	.thumbnail .caption {
 		padding: 2px 0px 2px 0px;
 	}
-	.thumbnail .caption > p{
+	.thumbnail .caption > p {
 		margin-bottom: 5px;
+		height: 60px;
 	}
 
 	.post_date, .post_author {

@@ -34,30 +34,6 @@ body {
 	padding-bottom: 10px;
 }
 
-@media (min-width: 320px) {
-  .container {
-    width: 100%;
-  }
-html {
-	font-size: 16px;
-}
-
-}
-
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-  html {font-size: 10px;}
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
-
-
 .navbar {
 	background-color: var(--bgd);
 	border-color: var(--bgd);
