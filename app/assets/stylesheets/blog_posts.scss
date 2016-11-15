@@ -4,9 +4,9 @@
 
 .PostArea{ 
 	
-	.col-sm-6{
-	padding:3px;
-	}
+
+	.col-sm-6{padding:3px}
+
 	.thumbnail {
 		border-radius: 0px;
 		border:0px;
@@ -26,11 +26,16 @@
 	}
 	.thumbnail .caption > p {
 		margin-bottom: 5px;
-		height: 60px;
+		/* height in media */
 	}
 
 	.post_date, .post_author {
 		color: #989799;
+		font-size: 0.8rem;
+	}
+
+	.badge {
+		font-size: 0.6rem;
 	}
 
 }

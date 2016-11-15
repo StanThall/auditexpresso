@@ -28,15 +28,24 @@ html{
 	position:relative;
 	min-height: 100%;
 }
+
 body {
 	background-color: var(--bgd);
 	margin-bottom: 100px;
 	padding-bottom: 10px;
 }
 
+#sidebar {
+	font-size: 0.8rem;
+}
+
 .navbar {
 	background-color: var(--bgd);
 	border-color: var(--bgd);
+}
+
+.lead {
+	font-size: 1.3rem;
 }
 
 #TheFooter {
@@ -45,8 +54,9 @@ body {
 	width: 100%;
 	background-color: var(--maincolor);
 	color: #fff;
-	height: 100px;
+	/* height in media */
 	padding-top: 10px;
+	font-size: 0.8rem;
 }
 
 #indiscretions{
@@ -70,7 +80,6 @@ a.striplist{
 }
 
 .uncollapsed_strip, .collapsable_strip.collapse.in {
-	font-size: 1.2rem;
 	border-bottom: 1px solid var(--lines);
 	padding: 0px 4px;
 	height: 40px;
@@ -104,14 +113,13 @@ a.striplist{
 
 
 #bottom_row{
-	/* background-color: #451475;
-	height: 30px;  */
 	display: flex;
 }
 	
 #top_row{
 	background-color: var(--maincolor);
 	padding: -5px;
+	/* height in media */
 }
 
 #top_row > a > img {
@@ -172,7 +180,6 @@ a.striplist{
 	margin: 0px auto;
 	border-spacing: 0px;
 	text-align: center;
-	font-size: 1.2rem;
 	word-wrap: normal;
 }
 .table#classement >tbody >tr >td {
@@ -184,13 +191,13 @@ a.striplist{
 	background-color: transparent;
 	border: 0px;
 	color:#68B166;	
-	font-size: 2rem;
+	font-size: 1.5rem;
 }
 .btn_classement_down, .btn_classement_down:hover, .a_vote_down{
 	background-color: transparent;
 	border: 0px;
 	color:#DF990A;	
-	font-size: 2rem;
+	font-size: 1.5rem;
 }
 .btn_classement_up:active {
 	background-color: #68B166 ;

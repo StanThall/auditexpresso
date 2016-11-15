@@ -1,48 +1,35 @@
 @media (min-width: 320px) {
-  .container {
-    width: 95%;
-    font-size: 1.8vmax;
-  }
-
-  .lead {
-    font-size: 2vmax;
-  }
-
-  .PostArea .thumbnail .caption > p {
-    height: 100px;
-  }
-
-  .PostArea .badge {
-    font-size: 1.6vmax;
-    padding: 5px 10px;
-  }
-
-  #TheFooter {
-  height: 200px;
-}
-
-  #top_row{
-  height: 120px;
-  }
-
-  .nav >li > a{
-    font-size: 2vmax;
-  }
-
-}
-
-
-@media (min-width: 1024px) {
   
+  html {font-size: 20px;}
+
+  .container {width: 95%;}
+
+  .PostArea .thumbnail .caption > p {height: 130px;}
+
+  .PostArea .badge {padding: 5px 10px;}
+
+  #TheFooter {height: 300px;}
+
+  #top_row{height: 200px;}
+
+  .nav >li > a {font-size: 2rem;}
+
+}
 
 
-  .container {
-    width: 1170px;
-  }
+@media (min-width: 750px) {
+  
+  html { font-size: 100%;}
 
-  #top_row{
-    height: 60px;
-  }
+  .container {width: 95%; max-width: 1200px;}
+
+  .PostArea .thumbnail .caption > p {height: 60px;}
+
+  #top_row{height: 60px;}
+
+  #TheFooter {height: 100px;}
+
+ .PostArea .badge {padding: 3px 7px;}
 
 
 }
