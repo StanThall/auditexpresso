@@ -1,29 +1,51 @@
-@media (min-width: 750px) {
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 767px) {
   
-  html { font-size: 100%;}
+  html { font-size: 250%;}
+  
+  body{
+    font-size: 1rem;
+    margin-bottom: 300px;
+    padding-bottom: 10px;
+  }
 
   .container {width: 95%; max-width: 1200px;}
 
-  .PostArea .thumbnail .caption > p {height: 60px;}
+  .PostArea .thumbnail .caption > p {height: 130px;}
 
-  #top_row{height: 60px;}
+  #top_row{height: 120px;}
 
-  #TheFooter {height: 100px;}
+  #TheFooter {height: 300px;}
 
- .PostArea .badge {padding: 3px 7px;}
+  .PostArea .badge {padding: 5px 10px;}
 
   .nav >li > a {font-size: 1rem;}
+  
+  .lead {font-size: 1rem;}
+
+  #sidebar {font-size: 0.5rem;}
+
 }
 
-@media (min-width: 320px) {
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 992px) {
   
-  html {font-size: 250%;}
+  html {font-size: 150%;}
 
-  body{font-size: 1rem;}
+  body{
+    font-size: 1rem;
+    margin-bottom: 300px;
+    padding-bottom: 10px;
+  }
 
   .container {width: 95%;}
 
-  .PostArea .thumbnail .caption > p {height: 130px;}
+  .lead{font-size: 1.5rem;}
+
+  .PostArea .thumbnail .caption > p {height: 90px;}
 
   .PostArea .badge {padding: 5px 10px;}
 
@@ -31,4 +53,25 @@
 
   #top_row{height: 120px;}
 
+  #sidebar {font-size: 0.7rem;}
+}
+
+@media only screen
+and (min-device-width : 993px) {
+  
+  html {font-size: 100%;}
+
+  body{
+    font-size: 1rem;
+    margin-bottom: 100px;
+    padding-bottom: 10px;
+  }
+
+  .lead{font-size: 1.2rem;}
+
+  #top_row{height: 60px;}
+
+  #TheFooter {height: 100px;}
+
+  #sidebar {font-size: 0.8rem;}
 }

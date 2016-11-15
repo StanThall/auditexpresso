@@ -15,15 +15,13 @@
     <%= render "navbar" %>
     <div class="container">
 
-
-        <div class="col-md-3 hidden-sm hidden-xs" id="sidebar">
+        <div class="col-sm-4 col-md-3 hidden-xs" id="sidebar">
         <%= render "sidebar" %>
         </div>
 
-        <div class="col-xs-12 col-md-9" id="display_div">
+        <div class="col-sm-8 col-md-9 col-xs-12" id="display_div">
           <%= yield %>
         </div>
-
     </div>
   
     <%= render "footer" %>

@@ -4,13 +4,11 @@
 
 .PostArea{ 
 	
-
-	.col-sm-6{padding:3px}
-
 	.thumbnail {
 		border-radius: 0px;
 		border:0px;
 		border-bottom: 1px solid var(--lines);
+		padding:0px;
 	}
 	.thumbnail .thumbnail-header > a > p {
 		color:var(--maincolor);

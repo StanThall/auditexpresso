@@ -31,21 +31,11 @@ html{
 
 body {
 	background-color: var(--bgd);
-	margin-bottom: 100px;
-	padding-bottom: 10px;
-}
-
-#sidebar {
-	font-size: 0.8rem;
 }
 
 .navbar {
 	background-color: var(--bgd);
 	border-color: var(--bgd);
-}
-
-.lead {
-	font-size: 1rem;
 }
 
 #TheFooter {
@@ -191,13 +181,13 @@ a.striplist{
 	background-color: transparent;
 	border: 0px;
 	color:#68B166;	
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 }
 .btn_classement_down, .btn_classement_down:hover, .a_vote_down{
 	background-color: transparent;
 	border: 0px;
 	color:#DF990A;	
-	font-size: 1.5rem;
+	font-size: 1.2rem;
 }
 .btn_classement_up:active {
 	background-color: #68B166 ;
