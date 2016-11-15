@@ -1,43 +1,48 @@
 <% @title=@blog_post.title %>
-<div class="row">
-  <img src="<%= image_path @blog_post.img_path unless @blog_post.img_path == nil %>" class="img-responsive"/>
- </div>
- <div class="row" style="margin-top: 10px;">
-	<div class="col-md-9" style="padding: 15px;border-right: 2px solid var(--lines);">
-		<p><%= raw(@blog_post.content) %></p>
+
+<div class="col-xs-4 PostArea">
+  	<img src="<%= image_path @blog_post.img_path unless @blog_post.img_path == nil %>" class="img-responsive"/>
+  	<p class="post_author" style="margin-top: 10px;">
+  		Par <%= link_to @blog_post.author.name, blog_posts_path(filter_author: @blog_post.author.name) %><br>
+  		Créé le : <%= @blog_post.created_at.strftime("%d-%b-%y") %> <br>
+  		Dernier update le : <%= @blog_post.updated_at.strftime("%d-%b-%y") %>
+  		<br>
+  		Tags: 
+  		<% @blog_post.tags.each do |tag| %>
+          <a href="<%= blog_posts_path(filter_tag: tag.label) %>"><span class="badge" style="background-color: var(--color_tag_<%= tag.id %>)"><%= tag.label %></span></a>
+         <% end %>
+  	</p>
+
+	<div style="text-align: center;">
+		<p style="margin: 0px;font-weight: bold;"><i class="fa fa-headphones"></i> Pour lire en musique<br/>
+		<hr style="border: 1.5px solid var(--maincolor);margin:5px 0px;"/>
+		</p>
+		<iframe src="https://embed.spotify.com/?uri=spotify%3Atrack%3A2cHQAKCDNoEob1XpdNC5o0" width="100%" height="80px;" frameborder="0" allowtransparency="true"></iframe>
 	</div>
-	<div class="col-md-3" style="padding: 0px 0px 0px 5px;">
-		
-		<div style="text-align: center;">
-			<p style="margin: 0px;font-weight: bold;"><i class="fa fa-headphones"></i> Pour lire en musique<br/>
-			<hr style="border: 1.5px solid var(--maincolor);margin:5px 0px;"/>
-			</p>
-			<iframe src="https://embed.spotify.com/?uri=spotify%3Atrack%3A2cHQAKCDNoEob1XpdNC5o0" width="100%" height="80px;" frameborder="0" allowtransparency="true"></iframe>
-		</div>
-		<div style="text-align: center;">
-			<p style="margin: 0px;margin-top: 10px;font-weight: bold;"><i class="fa fa-rocket"></i> Pour aller plus loin<br/>
-			<hr style="border: 1.5px solid var(--maincolor);margin:5px 0px;"/>
-			</p>
-			<ul>
-				<li>Coincoin</li>
-				<li>Cuicui</li>
-				<li>Coucou</li>
-				<li>Kirikiki</li>
-			</ul>
 
-
-		<div style="text-align: center;">
-			<p style="margin: 0px;margin-top: 10px;font-weight: bold;"><i class="fa fa-graduation-cap"></i> Sources <br/>
-			<hr style="border: 1.5px solid var(--maincolor);margin:5px 0px;"/>
-			</p>
-			<ul>
-				<li>Coincoin</li>
-				<li>Cuicui</li>
-				<li>Coucou</li>
-				<li>Kirikiki</li>
-			</ul>
-		</div>
-
-		</div>
+	<div style="text-align: center;">
+		<p style="margin: 0px;margin-top: 10px;font-weight: bold;"><i class="fa fa-rocket"></i> Pour aller plus loin<br/>
+		<hr style="border: 1.5px solid var(--maincolor);margin:5px 0px;"/>
+	</p>
+	<ul style="text-align: left">
+		<% @blog_post.furthers.each do |fur| %>
+			<li><%= link_to fur.label, fur.link %></li>
+		<% end %>
+	</ul>
 	</div>
-  </div>
+
+	<div style="text-align: center;">
+		<p style="margin: 0px;margin-top: 10px;font-weight: bold;"><i class="fa fa-graduation-cap"></i> Sources <br/>
+		<hr style="border: 1.5px solid var(--maincolor);margin:5px 0px;"/>
+		</p>
+		<ul style="text-align: left">
+			<% @blog_post.references.each do |ref| %>
+				<li><%= link_to ref.label, ref.link %></li>
+			<% end %>
+		</ul>
+	</div>
+</div>
+
+<div class="col-md-8" style="padding: 15px;border-left: 2px solid var(--lines);">
+	<p><%= raw(@blog_post.content) %></p>
+</div>

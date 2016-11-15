@@ -59,7 +59,7 @@ and (max-device-width : 992px) {
 @media only screen
 and (min-device-width : 993px) {
   
-  html {font-size: 100%;}
+  html {font-size: 110%;}
 
   body{
     font-size: 1rem;
@@ -67,11 +67,13 @@ and (min-device-width : 993px) {
     padding-bottom: 10px;
   }
 
-  .lead{font-size: 1.2rem;}
+  .lead{font-size: 1.3rem;}
 
   #top_row{height: 60px;}
 
   #TheFooter {height: 100px;}
 
   #sidebar {font-size: 0.8rem;}
+
+  .PostArea .badge {padding: 3px 7px; font-size: 0.7rem;}
 }
