@@ -110,7 +110,6 @@ a.striplist{
 }
 	
 #top_row{
-	height: 60px;
 	background-color: var(--maincolor);
 	padding: -5px;
 }
@@ -125,7 +124,6 @@ a.striplist{
 .nav>li>a {
     color: var(--maincolor);
     padding: 3px 3px;
-    font-size: 2rem;
     font-weight: bold;
 }
 

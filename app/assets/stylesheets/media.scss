@@ -9,11 +9,12 @@
   }
 
   .PostArea .thumbnail .caption > p {
-    height: 90px;
+    height: 100px;
   }
 
   .PostArea .badge {
     font-size: 1.6vmax;
+    padding: 5px 10px;
   }
 
   #TheFooter {
@@ -24,11 +25,24 @@
   height: 120px;
   }
 
+  .nav >li > a{
+    font-size: 2vmax;
+  }
+
 }
 
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
+  
+
+
   .container {
     width: 1170px;
   }
+
+  #top_row{
+    height: 60px;
+  }
+
+
 }
