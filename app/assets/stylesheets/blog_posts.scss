@@ -38,4 +38,21 @@
 
 }
 
+.react_button {
+	position: relative;
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: var(--maincolor);
+	border: 1px solid #9E2634;
+	font-size: 0.9em;
+	color: #fff;
+	height: 20px;
+	padding: 0px 0px;
+}
+
+.react_button:active, .react_button:focus, .react_button:hover {
+	outline: 6px auto var(--color_tag_1);
+	color: #fff;
+}
 

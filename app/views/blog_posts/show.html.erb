@@ -1,16 +1,7 @@
 <% @title=@blog_post.title %>
 
-<!-- Facebook SDK -->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 
-<div class="col-xs-4 PostArea">
+<div class="col-xs-3 PostArea">
   	<img src="<%= image_path @blog_post.img_path unless @blog_post.img_path == nil %>" class="img-responsive"/>
   	<p class="post_author" style="margin-top: 10px;">
   		Par <%= link_to @blog_post.author.name, blog_posts_path(filter_author: @blog_post.author.name) %><br>
@@ -23,10 +14,7 @@
          <% end %>
   	</p>
 	
-	<p style="margin: 0px;font-weight: bold;text-align: center;"><i class="fa fa-comments"></i> Pour réagir<br/>
-		<hr style="border: 1.5px solid var(--maincolor);margin:5px 0px;"/>
-	</p>
-	<div class="fb-share-button" data-href="<%= blog_post_url(@blog_post.id) %>" data-layout="button" data-size="small" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse">Share</a></div>
+	<button type="button" class="btn btn-md react_button"><i class="fa fa-comments"></i>Réagir</button>
 
 	<% if @blog_post.songs.exists? %>
 		<div style="text-align: center;">
@@ -66,6 +54,6 @@
 	<% end %>
 </div>
 
-<div class="col-xs-8" style="padding: 15px;border-left: 2px solid var(--lines);font-size: 1.2rem;">
+<div class="col-xs-9" style="padding: 15px;border-left: 2px solid var(--lines);font-size: 1.2rem;">
 	<p><%= raw(@blog_post.content) %></p>
 </div>
