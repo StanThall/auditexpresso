@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  *= require jquery-ui
+ *= require_media
  */
 
 :root {
@@ -49,19 +50,6 @@ body {
 	font-size: 0.8rem;
 }
 
-#indiscretions{
-	width: 95%;
-	margin: 0px auto;
-	padding: 0px 4px;
-}
-
-a.striplist:hover {
-	text-decoration: none;
-}
-a.striplist{
-	color: black;
-}
-
 #challenge{
 	padding: 10px 0px 0px 0px;
 	border-radius: 0px;
@@ -69,41 +57,9 @@ a.striplist{
 	border-bottom: 1px solid var(--lines);
 }
 
-.uncollapsed_strip, .collapsable_strip.collapse.in {
-	border-bottom: 1px solid var(--lines);
-	padding: 0px 4px;
-	height: 40px;
-	width:100%;
-	line-height: 100%;
-	display:table;
-	vertical-align: middle;
-}
-
-.indiscretions_collapse_trigger {
-	border-bottom: 1px solid var(--lines);
-	padding: 2px 0px;
-	text-align: center;
-}
-
-.collapsable_strip > p, .uncollapsed_strip > p {
-	display: table-cell;
-	vertical-align: middle;
-	color: black;
-}
-
-.collapsable_strip:hover, .uncollapsed_strip:hover{
-	background-color: var(--maincolor);
-	color:#fff;
-	cursor:pointer;
-}
-
-.collapsable_strip:hover > p , .uncollapsed_strip:hover > p {
-	color:#fff;
-}
-
-
 #bottom_row{
 	display: flex;
+	font-size: 1.1rem;
 }
 	
 #top_row{
