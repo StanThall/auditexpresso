@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  *= require jquery-ui
- *= require_media
+ *= require media
  */
 
 :root {
