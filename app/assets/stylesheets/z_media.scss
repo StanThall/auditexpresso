@@ -29,7 +29,12 @@ and (max-device-width : 767px) {
   #display_div {width: 100%; border-left: 0px;}
 
   @media (orientation: landscape) {
-    #sidebar {display: block;}
+    html { font-size: 150%;}
+    #sidebar {display: block; width: 40%; font-size: 0.8rem;}
+    #display_div{width: 60%; border-left: 1px solid var(--lines)}
+    .PostArea .thumbnail .caption > p {height: 80px;}
+    .uncollapsed_strip, .collapsable_strip.collapse.in { padding: 10px 5px; }
+    
   }
 
 }
@@ -48,7 +53,7 @@ and (max-device-width : 992px) {
 
   .container {width: 95%;}
 
-  .lead{font-size: 1.5rem;}
+  .lead{font-size: 1.4rem;}
 
   .PostArea .thumbnail .caption > p {height: 90px;}
 
