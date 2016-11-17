@@ -1,59 +1,71 @@
 <% @title=@blog_post.title %>
 
+<div class="PostArea">
+	<div class="col-xs-3" id="blog_post_sidebar">
+		<!-- post image -->
+	  	<img src="<%= image_path @blog_post.img_path unless @blog_post.img_path == nil %>" class="img-responsive"/>
 
-<div class="col-xs-3 PostArea">
-  	<img src="<%= image_path @blog_post.img_path unless @blog_post.img_path == nil %>" class="img-responsive"/>
-  	<p class="post_author" style="margin-top: 10px;">
-  		Par <%= link_to @blog_post.author.name, blog_posts_path(filter_author: @blog_post.author.name) %><br>
-  		Créé le : <%= @blog_post.created_at.strftime("%d-%b-%y") %> <br>
-  		Dernier update le : <%= @blog_post.updated_at.strftime("%d-%b-%y") %>
-  		<br>
-  		Tags: 
-  		<% @blog_post.tags.each do |tag| %>
-          <a href="<%= blog_posts_path(filter_tag: tag.label) %>"><span class="badge" style="background-color: var(--color_tag_<%= tag.id %>)"><%= tag.label %></span></a>
-         <% end %>
-  	</p>
-	
-	<button type="button" class="btn btn-md react_button"><i class="fa fa-comments"></i>Réagir</button>
+	  	<!-- post author, creation, update, tags -->
+	  	<p class="post_author" style="margin-top: 10px;">
+	  		Par <%= link_to @blog_post.author.name, blog_posts_path(filter_author: @blog_post.author.name) %><br>
+	  		Créé le : <%= @blog_post.created_at.strftime("%d-%b-%y") %> <br>
+	  		Dernier update le : <%= @blog_post.updated_at.strftime("%d-%b-%y") %>
+	  		<br>
+	  		Tags: 
+	  		<% @blog_post.tags.each do |tag| %>
+	          <a href="<%= blog_posts_path(filter_tag: tag.label) %>"><span class="badge badge_show" style="background-color: var(--color_tag_<%= tag.id %>)"><%= tag.label %></span></a>
+	         <% end %>
+	  	</p>
 
-	<% if @blog_post.songs.exists? %>
-		<div style="text-align: center;">
-			<p style="margin: 0px;font-weight: bold;"><i class="fa fa-headphones"></i> Pour lire en musique<br/>
-			<hr style="border: 1.5px solid var(--maincolor);margin:5px 0px;"/>
-			</p>
-			<% @blog_post.songs.each do |song| %>
-				<iframe width="100%" height="315" src="<%= song.link %>" frameborder="0"></iframe>
-			<% end %>
-		</div>
-	<% end %>
+	  	<!-- contact form -->
+	  	<%= render "comment_collect" %>
+		
+		<!-- button to trigger the comment form -->
+		<button type="button" class="btn btn-md react_button" data-toggle="collapse" data-target="#comment_form"><i class="fa fa-comments"></i> &nbsp;Réagir</button>
 
-	<% if @blog_post.furthers.exists? %>
-		<div style="text-align: center;">
-			<p style="margin: 0px;margin-top: 10px;font-weight: bold;"><i class="fa fa-rocket"></i> Pour aller plus loin<br/>
+		<!-- post song if it exists -->
+		<% if @blog_post.songs.exists? %>
+			<div style="text-align: center;">
+				<p style="margin: 0px;font-weight: bold;"><i class="fa fa-headphones"></i> Pour lire en musique<br/>
 				<hr style="border: 1.5px solid var(--maincolor);margin:5px 0px;"/>
-			</p>
-		<ul style="text-align: left">
-			<% @blog_post.furthers.each do |fur| %>
-				<li><%= link_to fur.label, fur.link %></li>
-			<% end %>
-		</ul>
-		</div>
-	<% end %>
-
-	<% if @blog_post.references.exists? %>
-		<div style="text-align: center;">
-			<p style="margin: 0px;margin-top: 10px;font-weight: bold;"><i class="fa fa-graduation-cap"></i> Sources <br/>
-			<hr style="border: 1.5px solid var(--maincolor);margin:5px 0px;"/>
-			</p>
+				</p>
+				<% @blog_post.songs.each do |song| %>
+					<iframe width="100%" height="315" src="<%= song.link %>" frameborder="0"></iframe>
+				<% end %>
+			</div>
+		<% end %>
+		
+		<!-- post furthers if exist -->
+		<% if @blog_post.furthers.exists? %>
+			<div style="text-align: center;">
+				<p style="margin: 0px;margin-top: 10px;font-weight: bold;"><i class="fa fa-rocket"></i> Pour aller plus loin<br/>
+					<hr style="border: 1.5px solid var(--maincolor);margin:5px 0px;"/>
+				</p>
 			<ul style="text-align: left">
-				<% @blog_post.references.each do |ref| %>
-					<li><%= link_to ref.label, ref.link %></li>
+				<% @blog_post.furthers.each do |fur| %>
+					<li><%= link_to fur.label, fur.link %></li>
 				<% end %>
 			</ul>
-		</div>
-	<% end %>
-</div>
+			</div>
+		<% end %>
+		
+		<!-- post references if exists -->
+		<% if @blog_post.references.exists? %>
+			<div style="text-align: center;">
+				<p style="margin: 0px;margin-top: 10px;font-weight: bold;"><i class="fa fa-graduation-cap"></i> Sources <br/>
+				<hr style="border: 1.5px solid var(--maincolor);margin:5px 0px;"/>
+				</p>
+				<ul style="text-align: left">
+					<% @blog_post.references.each do |ref| %>
+						<li><%= link_to ref.label, ref.link %></li>
+					<% end %>
+				</ul>
+			</div>
+		<% end %>
+	</div>
 
-<div class="col-xs-9" style="padding: 15px;border-left: 2px solid var(--lines);font-size: 1.2rem;">
-	<p><%= raw(@blog_post.content) %></p>
+	<!-- post html -->
+	<div class="col-xs-9" style="padding: 15px;font-size: 1.2rem;" id="blog_post_text">
+		<p><%= raw(@blog_post.content) %></p>
+	</div>
 </div>

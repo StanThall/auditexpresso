@@ -25,16 +25,29 @@ and (max-device-width : 767px) {
   
   .lead {font-size: 1rem;}
 
+  /* Main Layout */
   #sidebar {display: none;}
   #display_div {width: 100%; border-left: 0px;}
+  
+  /* Inside Blog Post Show */
+  #blog_post_sidebar{display: none;}
+  #blog_post_text{width: 100%; border-left: 0px;}
 
+
+  /* If mobile gets turned */
   @media (orientation: landscape) {
     html { font-size: 150%;}
+
+    /* Landscape - Main Layout */
     #sidebar {display: block; width: 40%; font-size: 0.8rem;}
     #display_div{width: 60%; border-left: 1px solid var(--lines)}
     .PostArea .thumbnail .caption > p {height: 80px;}
     .uncollapsed_strip, .collapsable_strip.collapse.in { padding: 10px 5px; }
-    
+    .react_button{font-size: 0.8rem;height: 30px;}
+
+    /* Landscape -  */
+    #blog_post_sidebar{display: block;width: 40%;}
+    #blog_post_text{width: 60%;border-left: 2px solid var(--lines)}
   }
 
 }
@@ -64,6 +77,14 @@ and (max-device-width : 992px) {
   #top_row{height: 80px;}
 
   #sidebar {font-size: 0.8rem;}
+
+  .react_button{font-size: 0.8rem;height: 30px;}
+
+  .PostArea .badge_show{font-size: 0.6rem;}
+
+   @media (orientation: landscape) {
+    html { font-size: 110%;}
+  }
 }
 
 @media only screen

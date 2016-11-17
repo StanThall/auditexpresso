@@ -1,0 +1,27 @@
+<%= form_tag({controller: "blog_posts", action: "comment_collect", method: "put", class: "nifty_form"},class: "collapse", id: "comment_form", remote: true) %>
+
+	<div id="comment_notice"></div>
+	<div id ="comment_howto">
+		<p>Vous pouvez aussi nous écrire à <span style="color:var(--maincolor);"><b>comment[at]nouslescac.fr</b></span><br>
+		</p>
+	</div>
+
+	<div class="field">
+		<%= label_tag "Nom/Pseudo" %>
+		<%= text_field :from, "Nom/Pseudo"  %>
+	</div> 
+
+	<div class="field">
+		<%= label_tag "Votre email (facultatif)" %>
+		<%= email_field :email, "Votre email"%>
+	</div> 
+
+	<div class="field">
+		<%= label_tag "Votre commentaire" %>
+		<%= text_area_tag :content  %>
+	</div> 
+
+	<div class="actions">
+		<%= submit_tag "Transmettre", id: "comment_form_send" %>
+	</div>
+</form>

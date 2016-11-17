@@ -1,6 +1,6 @@
 class BlogPostsController < ApplicationController
   before_action :set_blog_post, only: [:show, :edit, :update, :destroy]
-  http_basic_authenticate_with name: "pacetrader", password: "LAUre1986", except: [:index, :show]
+  http_basic_authenticate_with name: "pacetrader", password: "LAUre1986", except: [:index, :show, :comment_collect]
   
   # GET /blog_posts
   # GET /blog_posts.json
@@ -71,6 +71,15 @@ class BlogPostsController < ApplicationController
       format.html { redirect_to blog_posts_url, notice: 'Blog post was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def comment_collect
+    params.require(:content).permit(:email,:from)
+    content = params[:content]
+    email = params[:email] if params[:email].exists?
+    from = params[:from] if params[:from].exists?
+
+    CommentsMailer.comment_collect(content,email, from, "coin"  )
   end
 
   private
