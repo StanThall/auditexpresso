@@ -77,8 +77,9 @@ class BlogPostsController < ApplicationController
     content = params[:content]
     email = params[:email] if !params[:email].nil?
     from = params[:from] if !params[:from].nil?
+    on = BlogPost.find(params[:blog_post][:id]).title
 
-    CommentsMailer.comment_collect(content,from, email,"coin").deliver_now
+    CommentsMailer.comment_collect(content,from, email,on).deliver_now
   end
 
   private
