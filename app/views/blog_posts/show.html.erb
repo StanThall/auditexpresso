@@ -18,10 +18,11 @@
 	  	</p>
 
 	  	<!-- contact form -->
+	  	<%= content_tag(:div,"",id:"comment_notice") %>
 	  	<%= render "comment_collect" %>
 		
 		<!-- button to trigger the comment form -->
-		<button type="button" class="btn btn-md react_button" data-toggle="collapse" data-target="#comment_form"><i class="fa fa-comments"></i> &nbsp;Réagir</button>
+		<button type="button" class="btn btn-md react_button" data-toggle="collapse" data-target="#comment_form" onclick="$(this).hide();"><i class="fa fa-comments"></i> &nbsp;Réagir</button>
 
 		<!-- post song if it exists -->
 		<% if @blog_post.songs.exists? %>

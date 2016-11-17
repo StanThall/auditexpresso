@@ -74,12 +74,11 @@ class BlogPostsController < ApplicationController
   end
 
   def comment_collect
-    params.require(:content).permit(:email,:from)
     content = params[:content]
-    email = params[:email] if params[:email].exists?
-    from = params[:from] if params[:from].exists?
+    email = params[:email] if !params[:email].nil?
+    from = params[:from] if !params[:from].nil?
 
-    CommentsMailer.comment_collect(content,email, from, "coin"  )
+    CommentsMailer.comment_collect(content,from, email,"coin").deliver_now
   end
 
   private
