@@ -4,15 +4,16 @@ $(document).on("turbolinks:load",
 		var pBar = document.getElementById('progressbar');
 		var playBtn = document.getElementById('play-pause');
 		var muteBtn = document.getElementById('mute');
+		var pTextSpan = document.getElementById('progress_text');
 
 		video.addEventListener('click',function(){
 			if(video.paused==true){
 				video.play();
-				$(playBtn).hide();
-				
+				$(playBtn).fadeOut();
+				$(pTextSpan).text("C'est parti !");
 			} else {
 				video.pause();
-				$(playBtn).show();
+				$(playBtn).fadeIn();
 				$(playBtn).removeClass("fa-play");
 				$(playBtn).addClass("fa-pause");}
 		});
@@ -39,10 +40,18 @@ $(document).on("turbolinks:load",
 	  		var percent = Math.floor((100 / video.duration) * video.currentTime);
 	  		$('#progressbar').css("width",percent+"%");
 	  		pBar.getElementsByTagName('span')[0].innerHTML = percent+"%";
+	  		if (percent == 50){$(pTextSpan).text("Plus que 15 secondes !");}
+	  		if (percent == 60){$(pTextSpan).hide();}
 	  		if (percent == 100){
 	  			$('#progressbar').addClass("progress-bar-success");
 	  			pBar.getElementsByTagName('span')[0].innerHTML = "Merci !";
-	  			} else {$('#progressbar').removeClass("progress-bar-success");};
+	  			$(playBtn).removeClass();
+	  			$(playBtn).addClass("fa fa-heart");
+	  			$(playBtn).html("<span style='color:#fff;'>Merci !</span>");
+	  			$(playBtn).css("color", "var(--maincolor)");
+	  			$(playBtn).fadeIn();
+	  		} else {
+	  			$('#progressbar').removeClass("progress-bar-success");};
 			}, false);
   	});
 
