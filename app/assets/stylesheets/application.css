@@ -177,5 +177,17 @@ body {
 	cursor: pointer;
 }
 
+#the_button{
+	height: 50px;
+	width: 50px;
+	position: fixed;
+	bottom: 2%;
+	right: 5%;
+	padding: 0px;
+}
+
+#progressbar{
+	width: 100%;
+}
 
 

@@ -11,18 +11,44 @@
   </head>
 
   <body>
-  
-    <%= render "navbar" %>
-    <div class="container">
 
-        <div class="col-sm-4 col-md-3 hidden-xs" id="sidebar">
-          <%= render "sidebar" %>
+  <div class="modal fade" id="video_modal" tabindex="-1">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="progress">
+          <div class="progress-bar" id="progressbar" valuemax='10' value='0' style="width:0%;">
+            <span>0%</span>
+          </div>
         </div>
-
-        <div class="col-sm-8 col-md-9 col-xs-12" id="display_div">
-          <%= yield %>
+        <div class="embed-responsive embed-responsive-16by9">
+          <video controls id="the_video">
+            <source src="<%= asset_path("sncf.mp4") %>" type="video/mp4" >
+          </video>
         </div>
+      </div>
     </div>
+  </div>
+</div>
+
+  <%= render "navbar" %>
+
+  <div class="container">
+
+    <div class="col-sm-4 col-md-3 hidden-xs" id="sidebar">
+      <%= render "sidebar" %>
+    </div>
+
+    <div class="col-sm-8 col-md-9 col-xs-12" id="display_div">
+      <%= yield %>
+
+    </div>
+
+    <div id="the_button" data-toggle="modal" data-target="#video_modal">
+      <%= image_tag("button.png", class: "img-responsive") %>
+    </div>
+
+  </div>
   
     <%= render "footer" %>
 
