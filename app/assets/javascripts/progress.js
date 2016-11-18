@@ -5,7 +5,11 @@ $(document).on("turbolinks:load",
 		video.addEventListener('timeupdate', function() {
 	  		var percent = Math.floor((100 / video.duration) * video.currentTime);
 	  		$('#progressbar').css("width",percent+"%");
-	  		pBar.getElementsByTagName('span')[0].innerHTML = percent;
+	  		pBar.getElementsByTagName('span')[0].innerHTML = percent+"%";
+	  		if (percent == 100){
+	  			$('#progressbar').addClass("progress-bar-success");
+	  			pBar.getElementsByTagName('span')[0].innerHTML = "Merci !";
+	  			};
 			}, false);
   	});
 

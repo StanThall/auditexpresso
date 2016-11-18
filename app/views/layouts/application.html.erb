@@ -18,12 +18,12 @@
       <div class="modal-body">
         <div class="progress">
           <div class="progress-bar" id="progressbar" valuemax='10' value='0' style="width:0%;">
-            <span>0%</span>
+            <span></span>
           </div>
         </div>
         <div class="embed-responsive embed-responsive-16by9">
-          <video controls id="the_video">
-            <source src="<%= asset_path("sncf.mp4") %>" type="video/mp4" >
+          <video controls id="the_video" poster="<%= asset_path('sncf.png')%>">
+            <source src="<%= asset_path('sncf.mp4') %>" type="video/mp4" >
           </video>
         </div>
       </div>
