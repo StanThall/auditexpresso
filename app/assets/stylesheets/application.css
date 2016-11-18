@@ -191,10 +191,10 @@ body {
 }
 
 #play-pause {
-	font-size: 15rem;
+	font-size: 8rem;
 	position: absolute;
-	bottom: 20%;
-	left: 35%;
+	bottom: 30%;
+	left: 45%;
 	color: var(--lines);
 }
 #mute{

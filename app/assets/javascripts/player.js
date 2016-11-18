@@ -8,12 +8,13 @@ $(document).on("turbolinks:load",
 		video.addEventListener('click',function(){
 			if(video.paused==true){
 				video.play();
-				$(playBtn).removeClass("fa-play");
-				$(playBtn).addClass("fa-pause");
+				$(playBtn).hide();
+				
 			} else {
 				video.pause();
-				$(playBtn).removeClass("fa-pause");
-				$(playBtn).addClass("fa-play");}
+				$(playBtn).show();
+				$(playBtn).removeClass("fa-play");
+				$(playBtn).addClass("fa-pause");}
 		});
 
 		muteBtn.addEventListener('click',function(){
