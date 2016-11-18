@@ -1,0 +1,21 @@
+  <!-- The modal containing a video -->
+  <div class="modal fade" id="video_modal" tabindex="-1">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="progress">
+          <div class="progress-bar" id="progressbar" valuemax='10' value='0' style="width:0%;">
+            <span></span>
+          </div>
+        </div>
+        <div id="video_area">
+          <video width="100%" id="the_video">
+            <source src="<%= asset_path('sncf.mp4') %>" type="video/mp4" >
+          </video>
+          <i class="fa fa-play" type="button" id="play-pause"></i>
+          <i class="fa fa-volume-up" type="button" id="mute"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
