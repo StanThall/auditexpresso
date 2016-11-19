@@ -58,7 +58,7 @@ body {
 
 #bottom_row{
 	display: flex;
-	font-size: 1.1rem;
+	font-size: 1.2rem;
 }
 	
 #top_row{
@@ -208,8 +208,22 @@ body {
 	margin: auto;
 	vertical-align: middle;
 	display: table;
-
 }
+
+#video_text {
+	font-size: 4rem;
+	text-align: center;
+	color: var(--lines);
+	position: absolute;
+	top: 50%;
+	left: 0;
+	bottom: 50%;
+	width: 100%;
+	margin: auto;
+	vertical-align: middle;
+	display: table;
+}
+
 #mute{
 	color: #fff;
 	font-size: 1.5rem;

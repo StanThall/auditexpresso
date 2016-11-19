@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  advertiser: MyString
+  path: MyString
+  poster: MyString
+
+two:
+  advertiser: MyString
+  path: MyString
+  poster: MyString

@@ -65,11 +65,17 @@ $(document).on("turbolinks:load",
 	  		if (percent > 60){$(pTextSpan).hide();}
 	  		if (percent == 100){
 	  			$('#progressbar').addClass("progress-bar-success");
-	  			pBar.getElementsByTagName('span')[0].innerHTML = "Merci !";
+	  			pBar.getElementsByTagName('span')[0].innerHTML = "+0.10 € Merci !!!";
+	  			$(pBar.getElementsByTagName('span')[0]).css({
+	  				"font-weight" : "bold",
+	  				"font-size" : "1.2rem"
+	  			});
 	  			$(playBtn).removeClass();
-	  			$(playBtn).addClass("fa fa-heart");
-	  			$(playBtn).html("<span style='color:#fff;'>Merci !</span>");
-	  			$(playBtn).css("color", "var(--maincolor)");
+	  			$(playBtn).addClass("fa fa-thumbs-up");
+	  			$(playBtn).css({
+	  				"color" : "#FE4E00",
+	  				"font-size" : "20rem"
+	  			});
 	  			$(playBtn).fadeIn();
 	  		} else {
 	  			$('#progressbar').removeClass("progress-bar-success");};
