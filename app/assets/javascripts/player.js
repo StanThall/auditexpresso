@@ -5,6 +5,7 @@ $(document).on("turbolinks:load",
 		var playBtn = document.getElementById('play-pause');
 		var muteBtn = document.getElementById('mute');
 		var pTextSpan = document.getElementById('progress_text');
+		var expandBtn = document.getElementById('expand');
 
 		video.addEventListener('click',function(){
 			if(video.paused==true){
@@ -16,6 +17,28 @@ $(document).on("turbolinks:load",
 				$(playBtn).fadeIn();
 				$(playBtn).removeClass("fa-play");
 				$(playBtn).addClass("fa-pause");}
+		});
+
+		playBtn.addEventListener('click',function(){
+			if(video.paused==true){
+				video.play();
+				$(playBtn).fadeOut();
+				$(pTextSpan).text("C'est parti !");
+			} else {
+				video.pause();
+				$(playBtn).fadeIn();
+				$(playBtn).removeClass("fa-play");
+				$(playBtn).addClass("fa-pause");}
+		});
+
+		expandBtn.addEventListener('click',function(){
+			if(video.requestFullscreen){
+				video.requestFullscreen();
+			} else if(video.mozRequestFullscreen){
+				video.mozRequestFullscreen();
+			} else if (video.webkitRequestFullscreen) {
+				video.webkitRequestFullscreen();
+			}
 		});
 
 		muteBtn.addEventListener('click',function(){
@@ -34,14 +57,12 @@ $(document).on("turbolinks:load",
 			}
 		});
 
-
-
 		video.addEventListener('timeupdate', function() {
 	  		var percent = Math.floor((100 / video.duration) * video.currentTime);
 	  		$('#progressbar').css("width",percent+"%");
 	  		pBar.getElementsByTagName('span')[0].innerHTML = percent+"%";
-	  		if (percent == 50){$(pTextSpan).text("Plus que 15 secondes !");}
-	  		if (percent == 60){$(pTextSpan).hide();}
+	  		if (percent > 50){$(pTextSpan).text("Plus que 15 secondes !");}
+	  		if (percent > 60){$(pTextSpan).hide();}
 	  		if (percent == 100){
 	  			$('#progressbar').addClass("progress-bar-success");
 	  			pBar.getElementsByTagName('span')[0].innerHTML = "Merci !";

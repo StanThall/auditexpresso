@@ -19,10 +19,10 @@
 	--bgd: #fff;
 	--maincolor:#DA103B;
 	--lines: #EEEEEE;
-	--color_tag_1: #FE4E00;
-	--color_tag_2: #541388;
+	--color_tag_1: #0062FF;
+	--color_tag_2: #0A7F08;
 	--color_tag_3: #FF0F80;
-	--color_tag_4: #0A7F08;
+	--color_tag_4: #541388;
 }
 html{
 	position:relative;
@@ -177,34 +177,37 @@ body {
 	cursor: pointer;
 }
 
-#the_button{
-	height: 50px;
-	width: 50px;
-	position: fixed;
-	bottom: 2%;
-	right: 5%;
-	padding: 0px;
+#donate_area{
+	text-align: center;
 }
+
+#donate_area > button {
+	width: 100%;
+	color: #fff;
+	margin-top: 5px;
+	background-color: #FE4E00;
+	border: 1px solid #FE4E00;
+	font-size: 1em;
+	font-weight: bold;
+}
+
 
 #progressbar{
 	width: 100%;
 }
 
-#video_area{
-	display: block;
-	vertical-align: middle;
-}
-
 #play-pause {
 	font-size: 8rem;
-	/*
-	bottom: 30%;
-	left: 45%;*/
-	position: absolute;
 	text-align: center;
 	color: var(--lines);
+	position: absolute;
+	top: 50%;
+	left: 0;
+	bottom: 50%;
 	width: 100%;
-	line-height: inherit;
+	margin: auto;
+	vertical-align: middle;
+	display: table;
 
 }
 #mute{
@@ -212,7 +215,14 @@ body {
 	font-size: 1.5rem;
 	position: absolute;
 	bottom: 5%;
-	right: 5%;
+	right: 10%;
+}
+#expand{
+	color: #fff;
+	font-size: 1.5rem;
+	position: absolute;
+	bottom: 5%;
+	right: 4%;
 }
 .progress {
 	width: 100%;
@@ -224,7 +234,7 @@ body {
 }
 
 .modal-content{
-	background-color: var(--maincolor);
+	background-color: #FE4E00;
 	border: 0px;
 }
 
@@ -240,6 +250,9 @@ body {
 	padding: 0px;
 }
 
+video::-webkit-media-controls{
+	display: none;
+}
 
 
 
