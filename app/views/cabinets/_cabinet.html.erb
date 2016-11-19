@@ -1,7 +1,7 @@
 
 <tr class="<%= 'collapse collapsable_row' if cabinet.rank_last > 6 %>" >
 	<%= content_tag(:td,cabinet.rating, id: "rating_" << cabinet.id.to_s ) %>
-	<td>
+	<td title="<%= cabinet.l_name %>">
 		<% if !cabinet.rank_change.nil? && cabinet.rank_change != 0 && cabinet.rank_change_time > 1.hour.ago %>
 			<% if cabinet.rank_change == 1 %>
 				<%= content_tag :i, "", class: "fa fa-caret-up", style: "color: #68B166" %>

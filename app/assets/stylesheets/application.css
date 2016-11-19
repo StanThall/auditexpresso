@@ -49,6 +49,10 @@ body {
 	font-size: 0.8rem;
 }
 
+#TheFooter ul > li > a {
+	color: #fff;
+}
+
 #challenge{
 	padding: 10px 0px 0px 0px;
 	border-radius: 0px;
