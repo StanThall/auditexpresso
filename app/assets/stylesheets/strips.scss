@@ -18,8 +18,9 @@ div#panel-strip{
 	position: relative;
 	width: 100%;
 	margin-top: 5px;
-	background-color: var(--maincolor);
-	border: 1px solid #9E2634;
+	background-color: #DADBDD;
+	border: 1px solid #DADBDD;
+	color: black;
 	font-size: 0.8em;
 }
 
@@ -78,13 +79,13 @@ div#panel-strip{
 }
 
 .collapsable_strip:hover, .uncollapsed_strip:hover{
-	background-color: var(--maincolor);
-	color:#fff;
+	background-color: #E7E9EA;
+	color: black;
 	cursor:pointer;
 }
 
 .collapsable_strip:hover > p , .uncollapsed_strip:hover > p {
-	color:#fff;
+	color: black;
 }
 
 #indiscretions{

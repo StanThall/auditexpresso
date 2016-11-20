@@ -11,14 +11,15 @@
   </head>
 
   <body>
-    <%= render "video_modal" %>
+    
     <%= render "application/navbar" %>
+    <%= render "video_modal" %>
     <div class="container">
+
       <%= yield %>
     </div>
   
     <%= render "application/footer" %>
-
-    <%= javascript_include_tag bootstrap_js %>
+    
   </body>
 </html>

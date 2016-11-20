@@ -6,7 +6,7 @@
 	  	<img src="<%= image_path @blog_post.img_path unless @blog_post.img_path == nil %>" class="img-responsive"/>
 
 	  	<!-- post author, creation, update, tags -->
-	  	<p class="post_author" style="margin-top: 10px;">
+	  	<p class="post_author" style="margin-top: 2px;background-color: #EFF0F1;padding: 10px 5px;">
 	  		Par <%= link_to @blog_post.author.name, blog_posts_path(filter_author: @blog_post.author.name) %><br>
 	  		Créé le : <%= @blog_post.created_at.strftime("%d-%b-%y") %> <br>
 	  		Dernier update le : <%= @blog_post.updated_at.strftime("%d-%b-%y") %>
@@ -18,11 +18,11 @@
 	  	</p>
 
 		<!-- Soutien -->
-		<div style="text-align: center;">
-			<p style="margin: 0px;font-weight: bold;"><i class="fa fa-heart"></i> Soutenir ce blog<br/>
-			<hr style="border: 1.5px solid var(--maincolor);margin:5px 0px;"/>
+		<div style="text-align: center;margin-top:15px;">
+			<p style="margin: 5px 0px 5px 0px;font-weight: bold;"><i class="fa fa-heart" style="color:#FE4E00"></i> Soutenir ce blog<br/>
+			<hr style="border: 1.5px solid #FE4E00;margin:5px 0px;"/>
 			</p>
-			Cet article vous a <span style="color:var(--maincolor);font-weight: bold;">informé / fait réfléchir / rire</span> ? 30' pour nous soutenir !
+			Cet article vous a <span style="color:#FE4E00;font-weight: bold;">informé / fait réfléchir / rire</span> ? 30' pour nous soutenir !
 		</div>
 		<button class="btn btn-xs" id="button_donate" data-toggle="modal" data-target="#video_modal">
 			<%= content_tag(:i,"",class:"fa fa-play-circle", style:"font-size:1.2em;") %>
@@ -33,7 +33,7 @@
 		<!-- post song if it exists -->
 		<% if @blog_post.songs.exists? %>
 			<div style="text-align: center;">
-				<p style="margin: 10px 0px;font-weight: bold;"><i class="fa fa-headphones"></i> Pour lire en musique<br/>
+				<p style="margin: 20px 0px 5px 0px;font-weight: bold;"><i class="fa fa-headphones"></i> Pour lire en musique<br/>
 				<hr style="border: 1.5px solid var(--maincolor);margin: 5px 0px;"/>
 				</p>
 				<% @blog_post.songs.each do |song| %>
@@ -70,7 +70,7 @@
 			</div>
 		<% end %>
 
-  	<!-- contact form -->
+  		<!-- contact form -->
 	  	<%= content_tag(:div,"",id:"comment_notice") %>
 	  	<%= render "comment_collect" %>
 			
