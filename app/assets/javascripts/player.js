@@ -5,6 +5,7 @@ $(document).on("turbolinks:load",function() {
 	var muteBtn = document.getElementById('mute');
 	var pTextSpan = document.getElementById('progress_text');
 	var expandBtn = document.getElementById('expand');
+	var modal = document.getElementById('video_modal');
 
 	video.addEventListener('click',function(){
 		if(video.paused==true){
@@ -28,6 +29,15 @@ $(document).on("turbolinks:load",function() {
 			$(playBtn).fadeIn();
 			$(playBtn).removeClass("fa-play");
 			$(playBtn).addClass("fa-pause");}
+	});
+
+	$('#video_modal').on('hidden.bs.modal', function () {
+  		if (video.paused == false){
+  			video.pause();
+  			$(playBtn).fadeIn();
+			$(playBtn).removeClass("fa-play");
+			$(playBtn).addClass("fa-pause");
+  		}
 	});
 
 	expandBtn.addEventListener('click',function(){
