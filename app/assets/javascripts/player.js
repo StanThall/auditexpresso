@@ -1,4 +1,4 @@
-$(document).on('page:load',function() {
+$(document).on("turbolinks:load",function() {
 	var video = document.getElementById('the_video');
 	var pBar = document.getElementById('progressbar');
 	var playBtn = document.getElementById('play-pause');
