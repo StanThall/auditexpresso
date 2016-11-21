@@ -1,4 +1,4 @@
-<a href="<%= strip_path(strip.id) %>" class="striplist">	
+<a href="<%= strip_path(strip) %>" class="striplist">	
 	<div class="<%= if Strip.index_pg.last(5).include?(strip); 'collapse collapsable_strip'; else; 'uncollapsed_strip'; end %>" >
 		<p id="indiscretion_text"><%= strip.catch %></p>
 	</div>

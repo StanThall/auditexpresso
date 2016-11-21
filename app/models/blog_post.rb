@@ -6,12 +6,12 @@ class BlogPost < ApplicationRecord
 	has_many :furthers
 	has_many :songs
 	accepts_nested_attributes_for :author, :tags, :references, :furthers, :songs
-
 	
 	scope :filter_tag, ->(label){joins(:tags).where(tags: {label: label})}
 	scope :filter_author, ->(nme){joins(:author).where(authors: {name: nme})}
 
-
-
+	def to_param
+		self.slug
+	end
 
 end
