@@ -7,18 +7,18 @@
 	<%= hidden_field :blog_post, :id %>
 
 	<div class="field">
-		<%= label_tag "Nom/Pseudo" %>
-		<%= text_field_tag :from   %>
+		<%= label_tag "Nom/Pseudo" %><br>
+		<%= text_field_tag :from,"", required: :true   %>
 	</div> 
 
 	<div class="field">
-		<%= label_tag "Votre email (facultatif)" %>
+		<%= label_tag "Votre email (facultatif)" %><br>
 		<%= email_field_tag :email %>
 	</div> 
 
 	<div class="field">
-		<%= label_tag "Votre commentaire" %>
-		<%= text_area_tag :content  %>
+		<%= label_tag "Votre commentaire" %><br>
+		<%= text_area_tag :content,"", required: :true  %>
 	</div> 
 
 	<div class="actions">
