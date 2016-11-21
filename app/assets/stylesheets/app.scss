@@ -1,48 +1,24 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
- *= require jquery-ui
- */
 
-:root {
-	--bgd: #fff;
-	--maincolor:#DA103B;
-	--lines: #EEEEEE;
-	--color_tag_1: #0062FF;
-	--color_tag_2: #0A7F08;
-	--color_tag_3: #FF0F80;
-	--color_tag_4: #541388;
-}
+
 html{
 	position:relative;
 	min-height: 100%;
 }
 
 body {
-	background-color: var(--bgd);
+	background-color: $bgd;
 }
 
 .navbar {
-	background-color: var(--bgd);
-	border-color: var(--bgd);
+	background-color: $bgd;
+	border-color: $bgd;
 }
 
 #TheFooter {
 	position: absolute;
 	bottom:0;
 	width: 100%;
-	background-color: var(--maincolor);
+	background-color: $maincolor;
 	color: #fff;
 	/* height in media */
 	padding-top: 10px;
@@ -57,7 +33,7 @@ body {
 	padding: 10px 0px 0px 0px;
 	border-radius: 0px;
 	border:0px;
-	border-bottom: 1px solid var(--lines);
+	border-bottom: 1px solid $lines;
 }
 
 #bottom_row{
@@ -66,7 +42,7 @@ body {
 }
 	
 #top_row{
-	background-color: var(--maincolor);
+	background-color: $maincolor;
 	padding: -5px;
 	/* height in media */
 }
@@ -79,48 +55,48 @@ body {
 }
 
 .nav>li>a {
-    color: var(--maincolor);
+    color: $maincolor;
     padding: 3px 3px;
     font-weight: bold;
 }
 
 #tag_nav_1 {
-    color: var(--color_tag_1);
+    color: $color_tag_1;
 }
 #tag_nav_1:hover {
-	background-color: var(--bgd);
-	border-bottom: 3px solid var(--color_tag_1);
+	background-color: $bgd;
+	border-bottom: 3px solid $color_tag_1;
 	padding: 0px 3px;
 }
 #tag_nav_2 {
-    color: var(--color_tag_2);
+    color: var$color_tag_2;
 }
 #tag_nav_2:hover {
-	background-color: var(--bgd);
-	border-bottom: 3px solid var(--color_tag_2);
+	background-color: $bgd;
+	border-bottom: 3px solid $color_tag_2;
 	padding: 0px 3px;
 }
 #tag_nav_3 {
-    color: var(--color_tag_3);
+    color: $color_tag_3;
 }
 #tag_nav_3:hover {
-	background-color: var(--bgd);
-	border-bottom: 3px solid var(--color_tag_3);
+	background-color: $bgd;
+	border-bottom: 3px solid $color_tag_3;
 	padding: 0px 3px;
 }
 #tag_nav_4 {
-    color: var(--color_tag_4);
+    color: $color_tag_4;
 }
 #tag_nav_4:hover{
-	background-color: var(--bgd);
-	border-bottom: 3px solid var(--color_tag_4);
+	background-color: $bgd;
+	border-bottom: 3px solid $color_tag_4;
 	padding: 0px 3px;
 }
 
 #top-lines {
 	margin-top: 0px;
 	margin-bottom: 0px;
-	border-top: 1px solid var(--lines);
+	border-top: 1px solid $lines;
 }
 
 .table#classement{
@@ -163,7 +139,7 @@ body {
 }
 
 #display_div{
-	border-left: 1px solid var(--lines);
+	border-left: 1px solid $lines;
 }
 
 #classement_caption{
@@ -173,10 +149,10 @@ body {
 
 .table_collapse_trigger {
 	text-align: center;
-	border-top: 1px solid var(--lines);
+	border-top: 1px solid $lines;
 }
 .table_collapse_trigger:hover, .table_collapse_trigger:active, .indiscretions_collapse_trigger:hover, .indiscretions_collapse_trigger:active {
-	background-color: var(--maincolor);
+	background-color: $maincolor;
 	color: #fff;
 	cursor: pointer;
 }
@@ -203,7 +179,7 @@ body {
 #play-pause {
 	font-size: 8rem;
 	text-align: center;
-	color: var(--lines);
+	color: $lines;
 	position: absolute;
 	top: 50%;
 	left: 0;
@@ -217,7 +193,7 @@ body {
 #video_text {
 	font-size: 4rem;
 	text-align: center;
-	color: var(--lines);
+	color: $lines;
 	position: absolute;
 	top: 50%;
 	left: 0;

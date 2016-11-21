@@ -9,9 +9,9 @@ div#panel-strip{
 	a:hover, a:active, a:focus{text-decoration:none;}
 
 	.panel-heading{background-color: #fff;}
-	.panel-heading:hover{background-color: var(--maincolor);color: #fff;}
+	.panel-heading:hover{background-color: $maincolor;color: #fff;}
 	.panel-title{font-size: 1em;font-weight: bold;};
-	.panel-body{border-top:1px solid var(--lines);}
+	.panel-body{border-top:1px solid $lines;}
 }
 
 #indiscretions > button {
@@ -25,7 +25,7 @@ div#panel-strip{
 }
 
 #indiscretions > button:active, #indiscretions > button:focus {
-	outline: 5px auto var(--color_tag_1);
+	outline: 5px auto $color_tag_1;
 }
 
 #indiscretion_form_text {
@@ -37,7 +37,7 @@ div#panel-strip{
 	width: 100%;
 	margin-top: 5px;
 	color: #fff;
-	background-color: var(--maincolor);
+	background-color: $maincolor;
 	border: 1px solid #9E2634;
 	font-size: 0.9em;
 	border-radius: 3px;
@@ -55,7 +55,7 @@ div#panel-strip{
 }
 
 .uncollapsed_strip, .collapsable_strip.collapse.in {
-	border-bottom: 1px solid var(--lines);
+	border-bottom: 1px solid $lines;
 	padding: 0px 4px;
 	height: 40px;
 	width:100%;
@@ -67,7 +67,7 @@ div#panel-strip{
 }
 
 .indiscretions_collapse_trigger {
-	border-bottom: 1px solid var(--lines);
+	border-bottom: 1px solid $lines;
 	padding: 2px 0px;
 	text-align: center;
 }

@@ -7,11 +7,11 @@
 	.thumbnail {
 		border-radius: 0px;
 		border:0px;
-		border-bottom: 1px solid var(--lines);
+		border-bottom: 1px solid $lines;
 		padding:0px;
 	}
 	.thumbnail .thumbnail-header > a > p {
-		color:var(--maincolor);
+		color: $maincolor;
 		position: absolute;
 		left:5%;
 		top:5%;
@@ -41,7 +41,7 @@
 /* in Show */
 
 #blog_post_text{
-	border-left: 2px solid var(--lines);
+	border-left: 2px solid $lines;
 }
 #blog_post_sidebar{
 	word-wrap: break-word;
@@ -52,7 +52,7 @@
 	width: 100%;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	background-color: var(--maincolor);
+	background-color: $maincolor;
 	border: 1px solid #9E2634;
 	font-size: 0.9rem;
 	color: #fff;
@@ -61,7 +61,7 @@
 }
 
 .react_button:active, .react_button:focus, .react_button:hover {
-	outline: 6px auto var(--color_tag_1);
+	outline: 6px auto $color_tag_1;
 	color: #fff;
 }
 
