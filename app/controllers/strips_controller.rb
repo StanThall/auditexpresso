@@ -26,7 +26,7 @@ class StripsController < ApplicationController
   # POST /strips.json
   def create
     @strip = Strip.new(strip_params)
-
+    @strip.slug = ActiveSupport::Inflector.parameterize(@strip.catch)
     respond_to do |format|
       if @strip.save
         format.html { redirect_to @strip, notice: 'Strip was successfully created.' }
@@ -43,6 +43,7 @@ class StripsController < ApplicationController
   def update
     respond_to do |format|
       if @strip.update(strip_params)
+        @strip.slug = ActiveSupport::Inflector.parameterize(@strip.catch)
         format.html { redirect_to @strip, notice: 'Strip was successfully updated.' }
         format.json { render :show, status: :ok, location: @strip }
       else

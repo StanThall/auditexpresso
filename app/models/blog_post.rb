@@ -6,6 +6,7 @@ class BlogPost < ApplicationRecord
 	has_many :furthers
 	has_many :songs
 	accepts_nested_attributes_for :author, :tags, :references, :furthers, :songs
+	validates_presence_of :title, :img_path, :content
 	
 	scope :filter_tag, ->(label){joins(:tags).where(tags: {label: label})}
 	scope :filter_author, ->(nme){joins(:author).where(authors: {name: nme})}

@@ -38,6 +38,7 @@ class BlogPostsController < ApplicationController
   # POST /blog_posts.json
   def create
     @blog_post = BlogPost.new(blog_post_params)
+    @blog_post.slug = ActiveSupport::Inflector.parameterize(@blog_post.title)
     respond_to do |format|
       if @blog_post.save
         format.html { redirect_to @blog_post, notice: 'Blog post was successfully created.' }
@@ -54,6 +55,7 @@ class BlogPostsController < ApplicationController
   def update
     respond_to do |format|
       if @blog_post.update(blog_post_params)
+        @blog_post.slug = ActiveSupport::Inflector.parameterize(@blog_post.title)
         format.html { redirect_to @blog_post, notice: 'Blog post was successfully updated.' }
         format.json { render :show, status: :ok, location: @blog_post }
       else
