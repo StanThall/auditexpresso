@@ -9,6 +9,10 @@ body {
 	background-color: $bgd;
 }
 
+
+.maincolor{color: $maincolor;}
+
+
 .navbar {
 	background-color: $bgd;
 	border-color: $bgd;
@@ -52,6 +56,10 @@ body {
 	margin: 0 auto;
 	width: auto;
 	padding: 0px;
+}
+
+.line_main{
+	border: 1.5px solid $maincolor;
 }
 
 .nav>li>a {
@@ -159,6 +167,11 @@ body {
 
 #donate_area{
 	text-align: center;
+
+	.lead{
+		border-bottom: 1px solid $lines;
+		text-align: center;font-weight: bold;
+		padding-bottom: 5px;margin-bottom:5px;}
 }
 
 #button_donate {

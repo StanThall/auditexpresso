@@ -13,14 +13,14 @@
 	  		<br>
 	  		Tags: 
 	  		<% @blog_post.tags.each do |tag| %>
-	          <a href="<%= blog_posts_path(filter_tag: tag.label) %>"><span class="badge badge_show" style="background-color: $color_tag_<%= tag.id %>)"><%= tag.label %></span></a>
+	          <a href="<%= blog_posts_path(filter_tag: tag.label) %>"><span class="badge badge_show badge_tag_<%= tag.id %> "><%= tag.label %></span></a>
 	         <% end %>
 	  	</p>
 
 		<!-- Soutien -->
 		<div style="text-align: center;margin-top:15px;">
 			<p style="margin: 5px 0px 5px 0px;font-weight: bold;"><i class="fa fa-heart" style="color:#FE4E00"></i> Soutenir ce blog<br/>
-			<hr style="border: 1.5px solid #FE4E00;margin:5px 0px;"/>
+			<hr class="line_main" style="margin:5px 0px;"/>
 			</p>
 			Cet article vous a <span style="color:#FE4E00;font-weight: bold;">informé / fait réfléchir / rire</span> ? 30' pour nous soutenir !
 		</div>
@@ -34,7 +34,7 @@
 		<% if @blog_post.songs.exists? %>
 			<div style="text-align: center;">
 				<p style="margin: 20px 0px 5px 0px;font-weight: bold;"><i class="fa fa-headphones"></i> Pour lire en musique<br/>
-				<hr style="border: 1.5px solid $maincolor;margin: 5px 0px;"/>
+				<hr class="line_main" style="margin: 5px 0px;"/>
 				</p>
 				<% @blog_post.songs.each do |song| %>
 					<iframe width="100%" height="315" src="<%= song.link %>" frameborder="0"></iframe>
@@ -46,7 +46,7 @@
 		<% if @blog_post.furthers.exists? %>
 			<div style="text-align: center;">
 				<p style="margin: 0px;margin-top: 10px;font-weight: bold;"><i class="fa fa-rocket"></i> Pour aller plus loin<br/>
-					<hr style="border: 1.5px solid $maincolor;margin:5px 0px;"/>
+					<hr class="line_main" style="margin:5px 0px;"/>
 				</p>
 			<ul style="text-align: left">
 				<% @blog_post.furthers.each do |fur| %>
@@ -60,7 +60,7 @@
 		<% if @blog_post.references.exists? %>
 			<div style="text-align: center;">
 				<p style="margin: 0px;margin-top: 10px;font-weight: bold;"><i class="fa fa-graduation-cap"></i> Sources <br/>
-				<hr style="border: 1.5px solid $maincolor;margin:5px 0px;"/>
+				<hr class="line_main" style="margin:5px 0px;"/>
 				</p>
 				<ul style="text-align: left">
 					<% @blog_post.references.each do |ref| %>

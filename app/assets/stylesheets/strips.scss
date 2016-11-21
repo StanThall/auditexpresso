@@ -92,6 +92,14 @@ div#panel-strip{
 	width: 95%;
 	margin: 0px auto;
 	padding: 0px 4px;
+
+	.lead {
+		text-align: center;
+		border-bottom: 1px solid $lines;
+		font-weight: bold;
+		padding-bottom: 5px;
+		margin-bottom:5px;
+	}
 }
 
 a.striplist:hover {
