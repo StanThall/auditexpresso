@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'pages/show'
+
   resources :blog_posts
   resources :strips
   resources :tags
@@ -9,6 +11,7 @@ Rails.application.routes.draw do
   put 'cabinets/down/:id' =>'cabinets#down', as: 'down_cabinet'
   post 'strips/collect' => 'strips#collect', as: 'collect_strip'
   post 'blog_posts/comment_collect' => 'blog_posts#comment_collect', as: 'collect_comment'
+  get '/confidentialite' => 'pages#show'
   
   root 'blog_posts#index'
 end
