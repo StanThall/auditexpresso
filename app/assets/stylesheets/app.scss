@@ -195,28 +195,27 @@ body {
 }
 
 .progress {
-	position: relative;
-	vertical-align: middle;
-	display: table;
-}
-
-.progress {
 	width: 100%;
 	text-align: center;
 	margin-top: 2px;
 	margin-bottom: 5px;
 	background-color: #fff;
 	border-radius: 0px;
-	display: block;
+	display: table;
+	vertical-align: middle;
+	line-height: 20px;
 }
 
 #progressbar{
-	width: 100%;
+	display: inline-block;
 	height: 100%;
+	vertical-align: middle;
 }
 
 #progress_text{
-	display: block;
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
 }
 
 #play-pause {

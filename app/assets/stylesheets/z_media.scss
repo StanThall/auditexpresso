@@ -49,9 +49,9 @@ and (max-device-width : 767px) {
     .uncollapsed_strip, .collapsable_strip.collapse.in { padding: 10px 5px; }
 
     /* Landscape -  */
-    #blog_post_sidebar{display: block;width: 40%;}
+    #blog_post_sidebar{display: block; width: 40%;}
     #blog_post_text{width: 60%;border-left: 2px solid $lines;}
-    #progress_text{font-size: 0.6rem; font-weight: bold;}
+    #progress_text{font-size: 0.6rem;}
     
   }
 
@@ -87,7 +87,8 @@ and (max-device-width : 992px) {
 
   .PostArea .badge_show{font-size: 0.6rem;}
 
-  #progress_text{font-size: 0.7rem;} 
+  #progress_text{font-size: 0.6rem;}
+  #progressbar{font-size: 0.6rem;} 
   
 
    @media (orientation: landscape) {
