@@ -70,6 +70,7 @@ $(document).on("turbolinks:load",function() {
 			var percent = Math.floor((100 / video.duration) * video.currentTime);
 			$('#progressbar').css("width",percent+"%");
 			pBar.getElementsByTagName('span')[0].innerHTML = percent+"%";
+			if (percent > 20){$(pTextSpan).text("");}
 			if (percent > 50){$(pTextSpan).text("Plus que 15 secondes !");}
 			if (percent > 60){$(pTextSpan).hide();}
 			if (percent == 100){
@@ -83,7 +84,7 @@ $(document).on("turbolinks:load",function() {
 				$(playBtn).addClass("fa fa-thumbs-up");
 				$(playBtn).css({
 					"color" : "#FE4E00",
-					"font-size" : "20rem"
+					"font-size" : "15rem"
 				});
 				$(playBtn).fadeIn();
 			} else {
