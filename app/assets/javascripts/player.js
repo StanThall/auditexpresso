@@ -11,7 +11,7 @@ $(document).on("turbolinks:load",function() {
 		if(video.paused==true){
 			video.play();
 			$(playBtn).fadeOut();
-			$(pTextSpan).text("C'est parti !");
+			$(pTextSpan).html("C'est parti !");
 		} else {
 			video.pause();
 			$(playBtn).fadeIn();
@@ -23,7 +23,7 @@ $(document).on("turbolinks:load",function() {
 		if(video.paused==true){
 			video.play();
 			$(playBtn).fadeOut();
-			$(pTextSpan).text("C'est parti !");
+			$(pTextSpan).html("C'est parti !");
 		} else {
 			video.pause();
 			$(playBtn).fadeIn();
@@ -70,7 +70,7 @@ $(document).on("turbolinks:load",function() {
 			var percent = Math.floor((100 / video.duration) * video.currentTime);
 			$('#progressbar').css("width",percent+"%");
 			pBar.getElementsByTagName('span')[0].innerHTML = percent+"%";
-			if (percent > 50){$(pTextSpan).text("Plus que 15 secondes !");}
+			if (percent > 50){$(pTextSpan).html("Plus que 15 secondes !");}
 			if (percent > 60){$(pTextSpan).hide();}
 			if (percent == 100){
 				$('#progressbar').addClass("progress-bar-success");
