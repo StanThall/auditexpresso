@@ -5,6 +5,7 @@ class BlogPostsController < ApplicationController
   # GET /blog_posts
   # GET /blog_posts.json
   def index
+    @pub = Pub.find(rand(1..6))
     @title = "Audit Expresso"
     session[:a_vote_up] ||= false
     session[:a_vote_down] ||= false
@@ -22,6 +23,7 @@ class BlogPostsController < ApplicationController
   # GET /blog_posts/1
   # GET /blog_posts/1.json
   def show
+    @pub = Pub.find(rand(1..6))
     render 'show', layout: 'blogview'
   end
 

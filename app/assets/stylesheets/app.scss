@@ -68,6 +68,10 @@ body {
 	border: 1.5px solid $maincolor;
 }
 
+.lines{
+	border: 1.5px solid $lines;
+}
+
 .nav>li>a {
     color: $maincolor;
     padding: 3px 3px;

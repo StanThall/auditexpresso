@@ -4,12 +4,14 @@ class StripsController < ApplicationController
   # GET /strips
   # GET /strips.json
   def index
+    @pub = Pub.find(rand(1..6))
     @strips = Strip.order('created_at DESC')
   end
 
   # GET /strips/1
   # GET /strips/1.json
   def show
+    @pub = Pub.find(rand(1..6))
     @strips=Strip.order('created_at DESC')
   end
 
