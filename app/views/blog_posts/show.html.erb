@@ -6,7 +6,7 @@
 	  	<img src="<%= image_path @blog_post.img_path unless @blog_post.img_path == nil %>" class="img-responsive"/>
 
 	  	<!-- post author, creation, update, tags -->
-	  	<p class="post_author" style="margin-top: 2px;background-color: #EFF0F1;padding: 10px 5px;">
+	  	<p class="post_author" style="margin-top: 2px;background-color: #F8F9FB;padding: 10px 5px;font-size: inherit;">
 	  		Par <%= link_to @blog_post.author.name, blog_posts_path(filter_author: @blog_post.author.name) %><br>
 	  		Créé le : <%= @blog_post.created_at.strftime("%d-%b-%y") %> <br>
 	  		Dernier update le : <%= @blog_post.updated_at.strftime("%d-%b-%y") %>
@@ -20,7 +20,7 @@
 		<!-- Soutien -->
 		<div style="text-align: center;margin-top:15px;">
 			<p style="margin: 5px 0px 5px 0px;font-weight: bold;"><i class="fa fa-heart" style="color:#FE4E00"></i> Soutenir ce blog<br/>
-			<hr class="line_main" style="margin:5px 0px;"/>
+			<hr style="margin:5px 0px;border: 1.5px solid #FE4E00;"/>
 			</p>
 			Cet article vous a <span style="color:#FE4E00;font-weight: bold;">informé / fait réfléchir / rire</span> ? 30' pour nous soutenir !
 		</div>
@@ -75,7 +75,7 @@
 	  	<%= render "comment_collect" %>
 			
 		<!-- button to trigger the comment form -->
-		<button type="button" class="btn btn-md react_button" data-toggle="collapse" data-target="#comment_form" onclick="$(this).hide();"><i class="fa fa-comments"></i> &nbsp;Réagir</button>
+		<button type="button" class="btn btn-xs react_button" data-toggle="collapse" data-target="#comment_form" onclick="$(this).hide();"><i class="fa fa-comments"></i> &nbsp;Réagir</button>
 		
 	</div>
 

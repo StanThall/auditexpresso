@@ -8,17 +8,17 @@
 
 	<div class="field">
 		<%= label_tag "Nom/Pseudo" %><br>
-		<%= text_field_tag :from,"", required: :true   %>
+		<%= text_field_tag :from,"", required: :true, style: "width:100%;max-width:100%;"   %>
 	</div> 
 
 	<div class="field">
 		<%= label_tag "Votre email (facultatif)" %><br>
-		<%= email_field_tag :email %>
+		<%= email_field_tag :email,"",style: "width:100%;max-width:100%;" %>
 	</div> 
 
 	<div class="field">
 		<%= label_tag "Votre commentaire" %><br>
-		<%= text_area_tag :content,"", required: :true  %>
+		<%= text_area_tag :content,"", required: :true, style: "width:100%;max-width:100%;"  %>
 	</div> 
 
 	<div class="actions">

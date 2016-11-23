@@ -5,7 +5,7 @@ class BlogPostsController < ApplicationController
   # GET /blog_posts
   # GET /blog_posts.json
   def index
-    @title = "Nous les Cac"
+    @title = "Audit Expresso"
     session[:a_vote_up] ||= false
     session[:a_vote_down] ||= false
     if params[:filter_tag].present?

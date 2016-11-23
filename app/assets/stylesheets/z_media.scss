@@ -7,7 +7,7 @@ and (max-device-width : 767px) {
   
   body{
     font-size: 1rem;
-    margin-bottom: 300px;
+    margin-bottom: 400px;
     padding-bottom: 10px;
   }
 
@@ -17,7 +17,9 @@ and (max-device-width : 767px) {
 
   #top_row{height: 120px;}
 
-  #TheFooter {height: 300px;}
+  #TheFooter {height: 400px;
+    a { font-size: 0.8rem; }
+  }
 
   .PostArea .badge {padding: 5px 10px;}
 
@@ -37,17 +39,20 @@ and (max-device-width : 767px) {
   /* If mobile gets turned */
   @media (orientation: landscape) {
     html { font-size: 150%;}
-
+    body{margin-bottom: 200px;}
+    #TheFooter {height: 200px;}
+    
     /* Landscape - Main Layout */
     #sidebar {display: block; width: 40%; font-size: 0.8rem;}
     #display_div{width: 60%; border-left: 1px solid $lines;}
     .PostArea .thumbnail .caption > p {height: 80px;}
     .uncollapsed_strip, .collapsable_strip.collapse.in { padding: 10px 5px; }
-    .react_button{font-size: 0.8rem;height: 30px;}
 
     /* Landscape -  */
     #blog_post_sidebar{display: block;width: 40%;}
     #blog_post_text{width: 60%;border-left: 2px solid $lines;}
+    #progress_text{font-size: 0.6rem; font-weight: bold;}
+    
   }
 
 }
@@ -77,23 +82,19 @@ and (max-device-width : 992px) {
   #top_row{height: 80px;}
 
   #sidebar {font-size: 0.8rem;}
-
-  .react_button{font-size: 0.8rem;height: 30px;}
+  #blog_post_sidebar {font-size: 0.8rem;width: 30%;}
+  #blog_post_text{width: 70%;}
 
   .PostArea .badge_show{font-size: 0.6rem;}
 
-  #progress_text{
-    font-size: 0.8rem;
-    position: relative;
-    width: 100%;
-    height: 100%;
-    top:50%;
-    bottom: 50%;
-    display: table;
-  }
+  #progress_text{font-size: 0.7rem;} 
+  
 
    @media (orientation: landscape) {
     html { font-size: 110%;}
+      #progress_text{font-size: 0.8rem;}
+      #blog_post_sidebar {width: 25%;}
+      #blog_post_text{width: 75%;}
   }
 }
 
@@ -104,7 +105,7 @@ and (min-device-width : 993px) {
 
   body{
     font-size: 1rem;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
     padding-bottom: 10px;
   }
 
@@ -112,7 +113,7 @@ and (min-device-width : 993px) {
 
   #top_row{height: 60px;}
 
-  #TheFooter {height: 120px;}
+  #TheFooter {height: 150px;}
 
   #TheFooter .row {font-size: 1rem;}
 

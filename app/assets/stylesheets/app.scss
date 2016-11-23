@@ -27,11 +27,15 @@ body {
 	/* height in media */
 	padding-top: 10px;
 	font-size: 0.8rem;
+
+	a {
+		color: #fff;
+		font-size: 1rem;}
+
+	.social {font-size: 1.5rem;}
 }
 
-#TheFooter ul > li > a {
-	color: #fff;
-}
+
 
 #challenge{
 	padding: 10px 0px 0px 0px;
@@ -51,6 +55,7 @@ body {
 	padding: -5px;
 	/* height in media */
 }
+
 
 #top_row > a > img {
 	height: 100%;
@@ -185,6 +190,11 @@ body {
 	font-weight: bold;
 }
 
+.progress {
+	position: relative;
+	vertical-align: middle;
+	display: table;
+}
 
 #progressbar{
 	width: 100%;
