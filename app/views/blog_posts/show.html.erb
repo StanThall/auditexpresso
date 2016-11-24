@@ -54,13 +54,13 @@
 		
 		<!-- socials & comment -->	
 		<div class="socials">
-			<a class="btn btn-social-icon btn-twitter" >
+			<a class="btn btn-social-icon btn-twitter" onclick="javascript:window.open('https://twitter.com/share?text=&amp;url=<%= request.original_url %>','Twitter-dialog','width=626,height=436'); return false;" >
     			<span class="fa fa-twitter"></span>
   			</a>
   			<a class="btn btn-social-icon btn-facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('<%= request.original_url %>'),'facebook-share-dialog','width=626,height=436'); return false;">
     			<span class="fa fa-facebook"></span>
   			</a>
-  			<a class="btn btn-social-icon btn-linkedin">
+  			<a class="btn btn-social-icon btn-linkedin" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=<%= request.original_url %>&title=<%= @blog_post.title %>&source=http://www.auditexpresso.net','linkedin-share-dialog','width=626,height=436'); return false;">
     			<span class="fa fa-linkedin"></span> 
   			</a>
 			<a class="btn btn-social btn-pinterest" data-toggle="collapse" data-target="#comment_form">
