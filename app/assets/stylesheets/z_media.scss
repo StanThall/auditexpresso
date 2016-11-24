@@ -88,13 +88,13 @@ and (max-device-width : 992px) {
   .PostArea .badge_show{font-size: 0.6rem;}
 
   #progress_text{font-size: 0.7rem;} 
-  
 
    @media (orientation: landscape) {
     html { font-size: 110%;}
       
       #blog_post_sidebar {width: 25%;}
       #blog_post_text{width: 75%;}
+
   }
 }
 
