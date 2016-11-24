@@ -46,6 +46,7 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
+
 }
 
 /* in Show */
@@ -72,4 +73,25 @@
 	outline: 6px auto $color_tag_1;
 	color: #fff;
 }
+
+.socials{
+	line-height: 25px;
+	width: 100%;
+
+	.social{
+		display: inline-block;
+		position: relative;
+		width: 30%;
+		line-height: normal;
+		vertical-align: middle;
+		height: 100%;
+	}
+
+}
+
+
+
+
+
+
 
