@@ -12,11 +12,11 @@
 
   <body>
   
-  <%= render "video_modal" %>
+  <%= render "video_modal" unless @disable_pub  %>
 
   <%= render "navbar" %>
 
-  <div class="container">
+  <div class="container" >
     
     <div class="col-sm-4 col-md-3 hidden-xs" id="sidebar">
       <%= render "sidebar" %>

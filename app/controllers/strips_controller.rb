@@ -1,5 +1,6 @@
 class StripsController < ApplicationController
   before_action :set_strip, only: [:show, :edit, :update, :destroy]
+  before_action :disable_pub, only: [:edit]
   http_basic_authenticate_with name: "pacetrader", password: "LAUre1986", except: [:index, :show, :collect]
   # GET /strips
   # GET /strips.json
@@ -80,5 +81,9 @@ class StripsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def strip_params
       params.require(:strip).permit(:title, :catch, :content)
+    end
+
+    def disable_pub
+      @disable_pub = true;
     end
 end

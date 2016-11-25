@@ -1,5 +1,6 @@
 class BlogPostsController < ApplicationController
   before_action :set_blog_post, only: [:show, :edit, :update, :destroy]
+  before_action :disable_pub, only: [:edit]
   http_basic_authenticate_with name: "pacetrader", password: "LAUre1986", except: [:index, :show, :comment_collect]
   
   # GET /blog_posts
@@ -96,4 +97,9 @@ class BlogPostsController < ApplicationController
     def blog_post_params
       params.require(:blog_post).permit(:title, :catchphrase, :img_path, :content, :author_id, tag_ids: [], reference_ids: [], further_ids: [], song_ids: [])
     end
+
+    def disable_pub
+      @disable_pub = true;
+    end
+
 end
