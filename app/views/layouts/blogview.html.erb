@@ -8,6 +8,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag "scrollspy" %>
   </head>
 
   <body>
@@ -18,7 +19,15 @@
 
       <%= yield %>
     </div>
-  
+    
+    <div id="in_text_donate">
+      Ce post vous a <span class="donatecolor"><b>informé</b></span> / <span class="donatecolor"><b>fait sourire ? </b></span> Soutenez ce blog par un pourboire de 30 secondes !
+      <button class="btn btn-xs" id="button_donate" data-toggle="modal" data-target="#video_modal">
+      <%= content_tag(:i,"",class:"fa fa-play-circle") %>
+      Donner 30 secondes
+    </button>
+    </div>
+
     <%= render "application/footer" %>
     
   </body>

@@ -188,8 +188,8 @@ body {
 	width: 100%;
 	color: #fff;
 	margin-top: 5px;
-	background-color: #FE4E00;
-	border: 1px solid #FE4E00;
+	background-color: $donate_color;
+	border: 1px solid $donate_color;
 	font-size: 1em;
 	font-weight: bold;
 }
@@ -263,7 +263,7 @@ body {
 
 
 .modal-content{
-	background-color: #FE4E00;
+	background-color: $donate_color;
 	border: 0px;
 }
 

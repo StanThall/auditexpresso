@@ -1,5 +1,7 @@
 <% @title=@blog_post.title %>
 
+
+
 <!-- The post -->
 <div class="PostArea">
 	<!-- Sidebar -->
@@ -54,6 +56,7 @@
 		
 		<!-- socials & comment -->	
 		<div class="socials">
+
 			<a class="btn btn-social-icon btn-twitter" onclick="javascript:window.open('https://twitter.com/share?text=&amp;url=<%= request.original_url %>','Twitter-dialog','width=626,height=436'); return false;" >
     			<span class="fa fa-twitter"></span>
   			</a>
@@ -75,7 +78,6 @@
 		<p><%= raw(@blog_post.content) %></p>
 	</div>
 
-	
 
 </div>
 
