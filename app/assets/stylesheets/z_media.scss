@@ -34,6 +34,10 @@ and (max-device-width : 767px) {
   /* Inside Blog Post Show */
   #blog_post_sidebar{display: none;}
   #blog_post_text{width: 100%; border-left: 0px;}
+  #progress_text{font-size: 0.5rem;}
+  #play-pause{font-size: 8rem;}
+  #mute{font-size: 0.6rem;}
+  #expand{font-size: 0.6rem;}
 
 
   /* If mobile gets turned */
@@ -120,4 +124,7 @@ and (min-device-width : 993px) {
   #sidebar {font-size: 1rem;}
 
   .PostArea .badge {padding: 3px 7px; font-size: 0.8rem;}
+  #play-pause{font-size: 15rem;}
+  #mute{font-size: 1.5rem;}
+  #expand{font-size: 1.5rem;}
 }

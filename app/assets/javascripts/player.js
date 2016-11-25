@@ -77,14 +77,12 @@ $(document).on("turbolinks:load",function() {
 				$('#progressbar').addClass("progress-bar-success");
 				pBar.getElementsByTagName('span')[0].innerHTML = "+0.10 € Merci !!!";
 				$(pBar.getElementsByTagName('span')[0]).css({
-					"font-weight" : "bold",
-					"font-size" : "1.2rem"
+					"font-weight" : "bold"
 				});
 				$(playBtn).removeClass();
 				$(playBtn).addClass("fa fa-thumbs-up");
 				$(playBtn).css({
 					"color" : "#FE4E00",
-					"font-size" : "15rem"
 				});
 				$(playBtn).fadeIn();
 			} else {

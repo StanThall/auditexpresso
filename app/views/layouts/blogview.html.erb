@@ -21,8 +21,11 @@
     </div>
     
     <div id="in_text_donate">
-      Ce post vous a <span class="donatecolor"><b>informé</b></span> / <span class="donatecolor"><b>fait sourire ? </b></span> Soutenez ce blog par un pourboire de 30 secondes !
-      <button class="btn btn-xs" id="button_donate" data-toggle="modal" data-target="#video_modal">
+      Informé ? Diverti ? Un petit <span class="donatecolor"><b>pourboire</b></span> ? <i class="fa fa-smile-o"></i>
+      
+      <button type="button" class="close" id="close_in_text_donate" >&times;</button>
+      
+      <button class="btn btn-sm" id="button_donate" data-toggle="modal" data-target="#video_modal">
       <%= content_tag(:i,"",class:"fa fa-play-circle") %>
       Donner 30 secondes
     </button>
