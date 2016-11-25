@@ -77,7 +77,8 @@ $(document).on("turbolinks:load",function() {
 				$('#progressbar').addClass("progress-bar-success");
 				pBar.getElementsByTagName('span')[0].innerHTML = "+0.10 € Merci !!!";
 				$(pBar.getElementsByTagName('span')[0]).css({
-					"font-weight" : "bold"
+					"font-weight" : "bold",
+					"font-size" : "1rem"
 				});
 				$(playBtn).removeClass();
 				$(playBtn).addClass("fa fa-thumbs-up");
