@@ -1,0 +1,11 @@
+
+$(document).on("turbolinks:load",function(){
+	var btnDonate = document.getElementById('button_donate');
+	var videoModal = document.getElementById('video_modal');
+
+	btnDonate.addEventListener('click', function(){
+		$(videoModal).modal('show');
+
+
+	});
+});
