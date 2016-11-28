@@ -15,8 +15,8 @@
           </div>
         </div>
         <div id="video_area">
-          <video width="100%" id="the_video" poster="<%= asset_path(@pub.poster) %>" webkit-playsinline>
-            <source src="<%= asset_path(@pub.path) %>" type="video/mp4" >
+          <video width="100%" id="the_video" poster="<%= asset_path(@pub.poster) if @pub %>" webkit-playsinline>
+            <source src="<%= asset_path(@pub.path) if @pub %>" type="video/mp4" >
           </video>
           <i class="fa fa-play" type="button" id="play-pause"></i>
           <i class="fa fa-volume-up" type="button" id="mute"></i>

@@ -1,0 +1,8 @@
+<tr>
+	<td><%= log.session_id %></td>
+	<td><%= log.agent %></td>
+	<td><%= Action.find(log.action.id).label %></td>
+	<td><%= log.page %></td>
+	<td><%= log.from %></td>
+	<td><%= log.created_at %></td>
+</tr>

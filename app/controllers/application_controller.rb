@@ -1,9 +1,9 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  before_action :get_session_vars
+  before_action :set_vote
 
 #session initializers
-def get_session_vars
+def set_vote
 	session[:a_vote_up] ||= false
 	session[:a_vote_down] ||= false
 end

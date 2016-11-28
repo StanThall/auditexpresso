@@ -1,0 +1,13 @@
+<div id="logs">	
+	<table class="table table-bordered table-condensed" id="logs_table">
+		<tr class="info" id="logs_heads">
+			<td>Session_id</td>
+			<td style="width: 15%;">Agent</td>
+			<td style="width: 10%;">Action_id</td>
+			<td>Page</td>
+			<td>From</td>
+			<td>Created_at</td>
+		</tr>
+		<%= render Log.all.order("created_at DESC") %>
+	</table>
+</div>

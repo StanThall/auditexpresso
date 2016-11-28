@@ -1,4 +1,4 @@
-class StripsController < ApplicationController
+ class StripsController < ApplicationController
   before_action :set_strip, only: [:show, :edit, :update, :destroy]
   before_action :disable_pub, only: [:edit]
   http_basic_authenticate_with name: "pacetrader", password: "LAUre1986", except: [:index, :show, :collect]
@@ -7,6 +7,7 @@ class StripsController < ApplicationController
   def index
     @pub = Pub.find(rand(1..6))
     @strips = Strip.order('created_at DESC')
+    Log.new(action_id: 1, page: request.original_url, from: request.referer, session_id: session.id, agent: request.user_agent).save
   end
 
   # GET /strips/1
@@ -14,6 +15,7 @@ class StripsController < ApplicationController
   def show
     @pub = Pub.find(rand(1..6))
     @strips=Strip.order('created_at DESC')
+    Log.new(action_id: 1, page: request.original_url, from: request.referer, session_id: session.id, agent: request.user_agent).save
   end
 
   # GET /strips/new
