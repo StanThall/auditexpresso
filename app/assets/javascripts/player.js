@@ -89,5 +89,6 @@ $(document).on("turbolinks:load",function() {
 			} else {
 				$('#progressbar').removeClass("progress-bar-success");};
 		}, false);
+
 });
 
