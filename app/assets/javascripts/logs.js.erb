@@ -2,8 +2,14 @@
 $(document).on("turbolinks:load",function(){
 	newLog(1);
 	var btnDonate = document.getElementById('button_donate');
+	var btnDonateInText = document.getElementById('button_donate_in_text');
 	
 	btnDonate.addEventListener('click', function(e){
+		e.preventDefault();
+		newLog(2);
+	}, false);
+
+	btnDonateInText.addEventListener('click', function(e){
 		e.preventDefault();
 		newLog(2);
 	}, false);
