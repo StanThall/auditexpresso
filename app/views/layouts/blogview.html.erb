@@ -25,7 +25,7 @@
       
       <button type="button" class="close" id="close_in_text_donate" >&times;</button>
       
-      <button class="btn btn-sm" id="button_donate" data-toggle="modal" data-target="#video_modal" onclick="<%= Log.new(action_id: 2, page: request.original_url, from: request.referer, session_id: session.id, agent: request.user_agent).save %>">
+      <button class="btn btn-sm" id="button_donate" data-toggle="modal" data-target="#video_modal">
       <%= content_tag(:i,"",class:"fa fa-play-circle") %>
       Donner 30 secondes
     </button>

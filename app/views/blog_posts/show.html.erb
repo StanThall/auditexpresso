@@ -29,7 +29,7 @@
 			</p>
 			Cet article vous a <span style="color:#FE4E00;font-weight: bold;">informé / fait réfléchir / rire</span> ? 30' pour nous soutenir !
 		</div>
-		<button class="btn btn-xs" id="button_donate" data-toggle="modal" data-target="#video_modal" onclick="<%= Log.new(action_id: 2, page: request.original_url, from: request.referer, session_id: session.id, agent: request.user_agent).save %>">
+		<button class="btn btn-xs" id="button_donate" data-toggle="modal" data-target="#video_modal">
 			<%= content_tag(:i,"",class:"fa fa-play-circle", style:"font-size:1.2em;") %>
 			Donner 30 secondes
 		</button>

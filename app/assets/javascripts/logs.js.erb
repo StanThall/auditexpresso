@@ -1,7 +1,12 @@
 
 $(document).on("turbolinks:load",function(){
+	newLog(1);
 	var btnDonate = document.getElementById('button_donate');
-	var videoModal = document.getElementById('video_modal');
-
+	
+	btnDonate.addEventListener('click', function(e){
+		e.preventDefault();
+		newLog(2);
+	}, false);
+	
 
 });

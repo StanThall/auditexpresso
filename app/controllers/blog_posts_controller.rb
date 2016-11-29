@@ -10,7 +10,7 @@ class BlogPostsController < ApplicationController
     @title = "Audit Expresso"
     session[:a_vote_up] ||= false
     session[:a_vote_down] ||= false
-    Log.new(action_id: 1, page: request.original_url, from: request.referer, session_id: session.id, agent: request.user_agent).save
+    
     if params[:filter_tag].present?
       @blog_posts = BlogPost.filter_tag(params[:filter_tag])
       @title = params[:filter_tag]
@@ -26,7 +26,6 @@ class BlogPostsController < ApplicationController
   # GET /blog_posts/1.json
   def show
     @pub = Pub.find(rand(1..6))
-    Log.new(action_id: 1, page: request.original_url, from: request.referer, session_id: session.id, agent: request.user_agent).save
     render 'show', layout: 'blogview'
   end
 

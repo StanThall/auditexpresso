@@ -7,13 +7,15 @@ class LogsController < ApplicationController
 
   def create
   	@log = Log.new(log_params)
+    @log.session_id = session.id 
+    @log.agent = request.user_agent
   	@log.save
   end
 
   private
 
   def log_params
-  	params.permit(:action_id, :agent, :page, :from, :session_id)
+  	params.permit(:action_id, :page, :from)
   end
 
 end
