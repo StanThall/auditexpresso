@@ -29,6 +29,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 #Pour bootstrap
 gem 'bh'
+#ionicons
+gem 'font-ionicons-rails'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'rails_12factor', group: :production

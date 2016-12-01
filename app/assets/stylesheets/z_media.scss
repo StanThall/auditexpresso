@@ -40,6 +40,17 @@ and (max-device-width : 767px) {
   #expand{font-size: 0.6rem;}
   #button_donate_in_text {line-height: 80px;}
 
+  #post_content{
+    p {margin-top: 25px; margin-bottom: 25px;}
+    img {margin-top: 20px; margin-bottom: 20px;}
+    .mauvaiselangue {padding: 15px 10px;}
+    .ensituation {padding: 15px 10px;}
+    .well{padding: 15px 10px;}
+    .lines{border: 4px solid $lines;}
+    .in-text-image{max-width: 60%;margin-top: 30px;margin-bottom: 30px;}
+    .section_title{margin-top: 25px;}
+  }
+
 
   /* If mobile gets turned */
   @media (orientation: landscape) {
