@@ -8,7 +8,7 @@ $(document).on("turbolinks:load",function() {
 	var modal = document.getElementById('video_modal');
 
 	video.addEventListener('click',function(e){
-		e.preventDefault();
+		
 		if(video.paused==true){
 			video.play();
 			$(playBtn).fadeOut();
@@ -18,10 +18,10 @@ $(document).on("turbolinks:load",function() {
 			$(playBtn).fadeIn();
 			$(playBtn).removeClass("fa-play");
 			$(playBtn).addClass("fa-pause");}
-	}, false);
+	});
 
 	playBtn.addEventListener('click',function(e){
-		e.preventDefault();
+		
 		if(video.paused==true){
 			video.play();
 			$(playBtn).fadeOut();
@@ -31,20 +31,20 @@ $(document).on("turbolinks:load",function() {
 			$(playBtn).fadeIn();
 			$(playBtn).removeClass("fa-play");
 			$(playBtn).addClass("fa-pause");}
-	}, false);
+	});
 
 	$('#video_modal').on('hidden.bs.modal', function (e) {
-		e.preventDefault();
+		
   		if (video.paused == false){
   			video.pause();
   			$(playBtn).fadeIn();
 			$(playBtn).removeClass("fa-play");
 			$(playBtn).addClass("fa-pause");
   		}
-	}, false);
+	});
 
 	expandBtn.addEventListener('click',function(e){
-		e.preventDefault();
+		
 		if(video.requestFullscreen){
 			video.requestFullscreen();
 		} else if(video.mozRequestFullscreen){
@@ -52,10 +52,10 @@ $(document).on("turbolinks:load",function() {
 		} else if (video.webkitRequestFullscreen) {
 			video.webkitRequestFullscreen();
 		}
-	}, false);
+	});
 
 	muteBtn.addEventListener('click',function(e){
-		e.preventDefault();
+		
 		if (video.volume == 1){
 			video.volume = 0.0;
 			$(muteBtn).removeClass("fa-volume-up");
@@ -69,10 +69,10 @@ $(document).on("turbolinks:load",function() {
 			$(muteBtn).removeClass("fa-volume-down");
 			$(muteBtn).addClass("fa-volume-up");
 		}
-	}, false);
+	});
 
 	video.addEventListener('timeupdate', function(e) {
-		e.preventDefault();
+		
 		var percent = Math.floor((100 / video.duration) * video.currentTime);
 		$('#progressbar').css("width",percent+"%");
 		pBar.getElementsByTagName('span')[0].innerHTML = percent+"%";
@@ -96,7 +96,7 @@ $(document).on("turbolinks:load",function() {
 			return false;
 		} else {
 			$('#progressbar').removeClass("progress-bar-success");};
-	}, false);
+	});
 
 });
 

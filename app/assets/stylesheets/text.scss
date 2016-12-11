@@ -11,17 +11,22 @@
 		background-color: #FFFAFF;
 		border: 2px dashed #C82F41;
 		padding: 4px;
+		margin-top: 15px;
+		margin-bottom: 15px;
 	}
 
 	.section_title {
 		@extend .maincolor;
 		margin-top: 15px;
+		font-weight: bold;
 	}
 
 	.ensituation {
 		background-color: #FAFFFF;
 		border: 2px dashed #457CFC;
 		padding: 4px;
+		margin-top: 15px;
+		margin-bottom: 15px;
 	}
 
 	.lines{

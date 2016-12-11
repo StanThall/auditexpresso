@@ -1,5 +1,5 @@
 <div class="PostArea">
-<% @blog_posts.order('created_at DESC, updated_at DESC').each do |blog_post| %>
+<% @blog_posts.order('updated_at DESC, created_at DESC').each do |blog_post| %>
   <div class="col-md-6  col-sm-12 col-xs-12">
     <div class="thumbnail">
     <div class="thumbnail-header">
