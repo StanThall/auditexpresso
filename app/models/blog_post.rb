@@ -10,6 +10,7 @@ class BlogPost < ApplicationRecord
 	
 	scope :filter_tag, ->(label){joins(:tags).where(tags: {label: label})}
 	scope :filter_author, ->(nme){joins(:author).where(authors: {name: nme})}
+	scope :filter_live, ->{where(live: :true)}
 
 	def to_param
 		self.slug

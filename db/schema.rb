@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161129145527) do
+ActiveRecord::Schema.define(version: 20161212192908) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20161129145527) do
     t.integer  "author_id"
     t.integer  "tag_id"
     t.string   "slug"
+    t.boolean  "live"
   end
 
   create_table "cabinets", force: :cascade do |t|

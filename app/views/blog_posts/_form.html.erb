@@ -40,6 +40,11 @@
     <%= f.label :tags %>
     <%= f.collection_check_boxes :tag_ids, Tag.all, :id, :label, pormpt: true %>
   </div>
+
+   <div>
+    <%= f.label :live %>
+    <%= f.check_box :live %>
+  </div>
   
 
   <div class="actions">

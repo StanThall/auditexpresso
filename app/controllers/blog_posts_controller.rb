@@ -12,13 +12,13 @@ class BlogPostsController < ApplicationController
     session[:a_vote_down] ||= false
     
     if params[:filter_tag].present?
-      @blog_posts = BlogPost.filter_tag(params[:filter_tag])
+      @blog_posts = BlogPost.filter_live.filter_tag(params[:filter_tag])
       @title = params[:filter_tag]
     elsif params[:filter_author].present?
-      @blog_posts = BlogPost.filter_author(params[:filter_author])
+      @blog_posts = BlogPost.filter_live.filter_author(params[:filter_author])
       @title = "auteurs - " <<  params[:filter_author]
     else
-      @blog_posts = BlogPost.all
+      @blog_posts = BlogPost.filter_live
     end
   end
 
@@ -96,7 +96,7 @@ class BlogPostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_post_params
-      params.require(:blog_post).permit(:title, :catchphrase, :img_path, :content, :author_id, tag_ids: [], reference_ids: [], further_ids: [], song_ids: [])
+      params.require(:blog_post).permit(:title, :catchphrase, :img_path, :content, :author_id, :live, tag_ids: [], reference_ids: [], further_ids: [], song_ids: [])
     end
 
     def disable_pub
