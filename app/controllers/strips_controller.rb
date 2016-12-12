@@ -49,6 +49,7 @@
     respond_to do |format|
       if @strip.update(strip_params)
         @strip.slug = ActiveSupport::Inflector.parameterize(@strip.catch)
+        @strip.save
         format.html { redirect_to @strip, notice: 'Strip was successfully updated.' }
         format.json { render :show, status: :ok, location: @strip }
       else
