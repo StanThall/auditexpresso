@@ -2,6 +2,6 @@ function newLog (actID){
 	$.ajax({
 		url: "/logs",
 		type: "POST",
-		data: {"action_id" : actID, "page" : window.location.href, "from" : document.referer}
+		data: {"action_id" : actID, "page" : window.location.href}
 	});
 }

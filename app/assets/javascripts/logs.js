@@ -1,7 +1,6 @@
 
 $(document).on("turbolinks:load",function(){
 	
-	newLog(1);
 	var btnDonate = document.getElementById('button_donate');
 	
 	btnDonate.addEventListener('click', function(e){
@@ -22,3 +21,5 @@ $(document).on("turbolinks:load",function(){
 	
  
 });
+
+$(document).on("page:change",newLog(1));
