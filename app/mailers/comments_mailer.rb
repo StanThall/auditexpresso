@@ -1,5 +1,5 @@
 class CommentsMailer < ApplicationMailer
-	default from: "comment@nouslescac.fr"
+	default from: "comment@auditexpresso.net"
 
 	def comment_collect(content, from="undisclosed", email="undisclosed", on)
 		@content = content
