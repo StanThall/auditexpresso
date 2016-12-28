@@ -1,5 +1,9 @@
 <% @title=@strip.catch %>
 
+<% content_for :head do %>
+	<meta property="og:description" content="<%= @strip.title %>">
+<% end %>
+
 <p class="lead" style="text-align: center;font-weight: bold;margin-bottom:5px;font-size: 2em;">
 	<%= content_tag(:i,"",class: "fa fa-user-secret") %>
 	Indiscrétions
