@@ -1,6 +1,8 @@
 <% @title=@blog_post.title %>
 
-
+<% content_for :head do %>
+	<meta property="og:description" content="<%= @blog_post.catchphrase %>">
+<% end %>
 
 <!-- The post -->
 <div class="PostArea">
