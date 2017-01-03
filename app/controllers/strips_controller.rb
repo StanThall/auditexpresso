@@ -7,7 +7,7 @@
   def index
     @pub = Pub.find(rand(1..6))
     @strips = Strip.order('created_at DESC')
-    
+    render 'index', layout: 'stripview'
   end
 
   # GET /strips/1
@@ -15,7 +15,7 @@
   def show
     @pub = Pub.find(rand(1..6))
     @strips=Strip.order('created_at DESC')
-    
+    render 'show', layout: 'stripview'
   end
 
   # GET /strips/new
