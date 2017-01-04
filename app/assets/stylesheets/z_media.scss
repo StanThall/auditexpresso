@@ -50,7 +50,11 @@ and (max-device-width : 767px) {
     .in-text-image{max-width: 60%;margin-top: 30px;margin-bottom: 30px;}
     .section_title{margin-top: 25px;}
   }
+  /*  the modal */
 
+  .modal-dialog{
+    width: 90%;
+  }
 
   /* If mobile gets turned */
   @media (orientation: landscape) {
