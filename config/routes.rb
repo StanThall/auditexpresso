@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get '/confidentialite' => 'pages#show'
   post '/logs' => 'logs#create'
   get '/logs' => 'logs#index'
+  get '/auditometre' => 'pages#auditometre'
   
   root 'blog_posts#index'
 end

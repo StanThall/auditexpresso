@@ -18,6 +18,10 @@ body {
 	border-color: $bgd;
 }
 
+.navbar-toggle{
+	background-color: $donate_color;
+}
+
 #TheFooter {
 	position: absolute;
 	bottom:0;
@@ -48,6 +52,34 @@ body {
 #bottom_row{
 	display: flex;
 	font-size: 1.2rem;
+}
+
+#small_nav {
+	
+	margin-left: auto;margin-right: auto;
+
+	li {	
+		
+		margin: 0px 10px;
+
+		a {	
+			font-size: 1rem;
+			color: black;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		a:active {	
+			text-decoration: none;
+			color: $maincolor;
+		}
+		a:hover {	
+			text-decoration: none;
+		}
+		a:focus {	
+			text-decoration: none;
+		}
+	}
 }
 	
 #top_row{

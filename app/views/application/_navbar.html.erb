@@ -10,11 +10,18 @@
 			</div>
 		</div>
 		<div class="row" id="bottom_row">
-			<div class="col-md-6 col-md-offset-3">
+			<div class="col-md-6 col-md-offset-3" id="big_nav">
 				<ul class="nav nav-justified">
 					<% Tag.all.each do |tag| %>
 						<li><%= link_to tag.label, blog_posts_path(filter_tag: tag.label), id: "tag_nav_"+tag.id.to_s %></li>
 					<% end %>
+				</ul>
+			</div>
+			<div id="small_nav">
+				<ul class="list-inline">
+					<li><a href="/"><i class="glyphicon glyphicon-home"></i> Posts</a></li>
+					<li><a href="/strips"><i class="fa fa-user-secret"></i> Indiscretions</a></li>
+					<li><a href="/auditometre"><i class="fa fa-line-chart" aria-hidden="true"></i> Audit-o-mètre</a></li>
 				</ul>
 			</div>
 		</div>

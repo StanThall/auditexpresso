@@ -25,11 +25,14 @@ and (max-device-width : 767px) {
 
   .nav >li > a {font-size: 1rem;}
   
-  .lead {font-size: 1rem;}
+  .lead {font-size: 1.1rem;}
 
   /* Main Layout */
   #sidebar {display: none;}
   #display_div {width: 100%; border-left: 0px;}
+  #big_nav {display: none;}
+  #top-lines{border-top: 3px solid $lines;}
+  .PostArea .thumbnail{border-bottom: 3px solid $lines;}
   
   /* Inside Blog Post Show */
   #blog_post_sidebar{display: none;}
@@ -50,7 +53,19 @@ and (max-device-width : 767px) {
     .in-text-image{max-width: 60%;margin-top: 30px;margin-bottom: 30px;}
     .section_title{margin-top: 25px;}
   }
-  /*  the modal */
+  /*  in Strips*/
+
+  div#panel-strip{
+    border: 0px solid $lines;
+    border-bottom: 3px solid $maincolor;
+    margin-top: 0px;
+    padding: 10px 0px;
+
+    .panel-title {
+      font-size: 0.9rem;
+    }
+
+  }
 
   .modal-dialog{
     width: 90%;
@@ -65,6 +80,8 @@ and (max-device-width : 767px) {
     /* Landscape - Main Layout */
     #sidebar {display: block; width: 40%; font-size: 0.8rem;}
     #display_div{width: 60%; border-left: 1px solid $lines;}
+    #big_nav {display: block;}
+    #small_nav{display: none;}
     .PostArea .thumbnail .caption > p {height: 80px;}
     .uncollapsed_strip, .collapsable_strip.collapse.in { padding: 10px 5px; }
 
@@ -100,6 +117,7 @@ and (max-device-width : 992px) {
   #TheFooter {height: 200px;}
 
   #top_row{height: 80px;}
+  #small_nav{display: none;}
 
   #sidebar {font-size: 0.8rem;}
   #blog_post_sidebar {font-size: 0.8rem;width: 30%;}
@@ -132,6 +150,7 @@ and (min-device-width : 993px) {
   .lead{font-size: 1.4rem;}
 
   #top_row{height: 60px;}
+  #small_nav{display: none;}
 
   #TheFooter {height: 150px;}
 
