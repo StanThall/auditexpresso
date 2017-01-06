@@ -7,7 +7,7 @@ function newLog (actID){
 }
 
 function thankYou(){
-	if(document.getElementById('in_text_donate') !== null && $(donatePop).is(":visible")){
+	if(document.getElementById('in_text_donate') !== null && $('#in_text_donate').is(":visible")){
 		var donatePop = document.getElementById('in_text_donate');
 		if ($(donatePop).is(":visible")) {
 			donatePop.innerHTML = "<i class='fa fa-heart'></i> Merci pour le pourboire <i class='fa fa-heart'></i><button type='button' id='close_in_text_donate'>&times;</button>";
