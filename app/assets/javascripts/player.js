@@ -72,7 +72,6 @@ $(document).on("turbolinks:load",function() {
 	});
 
 	video.addEventListener('timeupdate', function(e) {
-		
 		var percent = Math.floor((100 / video.duration) * video.currentTime);
 		$('#progressbar').css("width",percent+"%");
 		pBar.getElementsByTagName('span')[0].innerHTML = percent+"%";
@@ -97,6 +96,5 @@ $(document).on("turbolinks:load",function() {
 		} else {
 			$('#progressbar').removeClass("progress-bar-success");};
 	});
-
 });
 

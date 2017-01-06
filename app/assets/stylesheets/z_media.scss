@@ -71,9 +71,16 @@ and (max-device-width : 767px) {
     }
 
   }
-
+  
+  /* The modal */
   .modal-dialog{
     width: 90%;
+  }
+
+  /* Popup */
+  #button_donate_in_text{
+    height: 125px;
+    font-size: 1.3rem;
   }
 
   /* If mobile gets turned */

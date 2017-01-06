@@ -41,16 +41,7 @@
       </div>
     </div>
     
-    <div id="in_text_donate">
-      <span class="donatecolor">Informé ? Diverti ? Un petit <b>pourboire</b>? <i class="fa fa-smile-o"></i></span> 
-      
-      <button type="button" class="close" id="close_in_text_donate" >&times;</button>
-      
-      <button class="btn btn-sm" id="button_donate_in_text" data-toggle="modal" data-target="#video_modal">
-      <%= content_tag(:i,"",class:"fa fa-play-circle") %>
-      Regarder 30s de pub pour nous soutenir !
-      </button>
-    </div>
+    <%= render "application/in_text_donate" %>
 
     <%= render "application/footer" %>
     
