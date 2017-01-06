@@ -26,10 +26,14 @@
 
 		<!-- Soutien -->
 		<div style="text-align: center;margin-top:15px;">
-			<p style="margin: 5px 0px 5px 0px;font-weight: bold;"><i class="fa fa-heart" style="color:#FE4E00"></i> Soutenir ce blog<br/>
-			<hr style="margin:5px 0px;border: 1.5px solid #FE4E00;"/>
-			</p>
-			Cet article vous a <span style="color:#FE4E00;font-weight: bold;">informé / fait réfléchir / rire</span> ? 30' pour nous soutenir !
+			<div id="donate_notice"></div>
+			<div id="donate_text">
+				<p style="margin: 5px 0px 5px 0px;font-weight: bold;"><i class="fa fa-heart" style="color:#FE4E00"></i> Soutenir ce blog<br/>
+				<hr style="margin:5px 0px;border: 1.5px solid #FE4E00;"/>
+				</p>
+				Regarder 30 sec de pub équivaut à un <span class="donatecolor"><b>pourboire</b></span> de 10ct <span class="donatecolor"><b>Merci !!! 
+				<%= content_tag(:i,"",class: "fa fa-heart") %></b></span>
+			</div>
 		</div>
 		<button class="btn btn-xs" id="button_donate" data-toggle="modal" data-target="#video_modal">
 			<%= content_tag(:i,"",class:"fa fa-play-circle", style:"font-size:1.2em;") %>

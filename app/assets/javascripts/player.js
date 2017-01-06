@@ -92,6 +92,7 @@ $(document).on("turbolinks:load",function() {
 			});
 			$(playBtn).fadeIn();
 			newLog(3);
+			thankYou();
 			return false;
 		} else {
 			$('#progressbar').removeClass("progress-bar-success");};
