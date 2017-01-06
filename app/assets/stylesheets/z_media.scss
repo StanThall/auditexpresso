@@ -33,6 +33,11 @@ and (max-device-width : 767px) {
   #big_nav {display: none;}
   #top-lines{border-top: 3px solid $lines;}
   .PostArea .thumbnail{border-bottom: 3px solid $lines;}
+  #video_modal{
+    .close {
+      font-size: 1.5rem;
+    }
+  }
   
   /* Inside Blog Post Show */
   #blog_post_sidebar{display: none;}

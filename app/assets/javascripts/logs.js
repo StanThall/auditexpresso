@@ -15,10 +15,7 @@ $(document).on("turbolinks:load",function(){
 			e.preventDefault();
 			newLog(2);
 		}, false);
-
-
 	}
-	
  
 });
 

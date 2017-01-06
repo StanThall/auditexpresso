@@ -10,7 +10,7 @@ class LogsController < ApplicationController
     @log.session_id = session.id 
     @log.agent = request.user_agent
   	@log.save
-    LogsMailer.video_finish(@log.page, @log.agent, @log.session_id).deliver_now if @log.action_id == 3
+    LogsMailer.action_taken(@log.action_id, @log.page, @log.agent, @log.session_id).deliver_now if @log.action_id == 3 || @log.action_id == 6 || @log.action_id == 7
   end
 
   private
