@@ -75,6 +75,19 @@ and (max-device-width : 767px) {
   .modal-dialog{
     width: 90%;
   }
+  .progress{
+    height: 50px;
+    line-height: 50px;
+
+    span{
+      line-height: 50px;
+      font-size: 0.8rem;
+    }
+  }
+
+  #progress_text{
+    font-size: 0.8rem;
+  }
 
   /* Popup */
   #button_donate_in_text{
