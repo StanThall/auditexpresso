@@ -20,11 +20,11 @@ class LogsController < ApplicationController
 
     case @log.action_id
     when 3
-      client.chat_postMessage(channel: '#auditexpresso', text: '*Video Vue !*\n' + info2, as_user: true)
+      client.chat_postMessage(channel: '#auditexpresso_logs', text: '*Video Vue !*\n' + info2, as_user: true)
     when 6
-      client.chat_postMessage(channel: '#auditexpresso', text: '*Popup !*\n'+ info, as_user: true)
+      client.chat_postMessage(channel: '#auditexpresso_logs', text: '*Popup !*\n'+ info, as_user: true)
     when 7
-      client.chat_postMessage(channel: '#auditexpresso', text: '*Popup Fermée !*\n'+ info, as_user: true)
+      client.chat_postMessage(channel: '#auditexpresso_logs', text: '*Popup Fermée !*\n'+ info, as_user: true)
     end
 
   end
