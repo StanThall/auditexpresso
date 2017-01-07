@@ -22,9 +22,9 @@ module TheBlog
     	authentication: 'plain',
     	enable_starttls_auto: true
     }
-
-
-
-
   end
+ENV['SLACK_API_TOKEN'] = 'xoxb-124648732388-Owb8Bv03PCBWR5XT4bkYrore'
+
+
+
 end
