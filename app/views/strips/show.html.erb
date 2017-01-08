@@ -12,7 +12,7 @@
 <div class="panel-group" id="accordion" role="tablist">
 	<div class="panel panel-default" id="panel-strip">
 		<a data-toggle="collapse" data-parent="#accordion" href="#collapse_<%= @strip.id %>" >
-		    <div class="panel-heading" role="tab" id="headingOne">
+		    <div class="panel-heading maincolorbg" role="tab" id="headingOne" onclick="$(this).toggleClass('maincolorbg')">
 		      <h4 class="panel-title">
 		          <%= @strip.title %>
 		      </h4>
@@ -28,7 +28,7 @@
 	<% @strips.reject{|s| s.id == @strip.id}.each do |s| %>
 	  <div class="panel panel-default" id="panel-strip">
 	    <a data-toggle="collapse" data-parent="#accordion" href="#collapse_<%= s.id %>" >
-		    <div class="panel-heading" role="tab" id="heading_<%= s.id %>" >
+		    <div class="panel-heading" role="tab" id="heading_<%= s.id %>" onclick="$(this).toggleClass('maincolorbg')" >
 		      <h4 class="panel-title">
 		          <%= s.title %>
 		      </h4>
