@@ -21,7 +21,7 @@ class LogsController < ApplicationController
     when 3
       client.chat_postMessage(channel: '#auditexpresso_logs', text: ':+1: *Video Vue !*' + info, as_user: true)
     when 2 
-      client.chat_postMessage(channel: '#auditexpresso_logs', text: '*Button Click*' + info, as_user: true)
+      client.chat_postMessage(channel: '#auditexpresso_logs', text: ':warning: *Button Click*' + info, as_user: true)
     end
 
   end
