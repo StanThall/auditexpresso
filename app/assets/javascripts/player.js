@@ -1,4 +1,4 @@
-$(document).on("turbolinks:load",function() {
+$(document).ready(function() {
 	var video = document.getElementById('the_video');
 	var pBar = document.getElementById('progressbar');
 	var playBtn = document.getElementById('play-pause');
@@ -91,11 +91,16 @@ $(document).on("turbolinks:load",function() {
 				"color" : "#FE4E00",
 			});
 			$(playBtn).fadeIn();
-			newLog(3);
-			thankYou();
 			return false;
 		} else {
 			$('#progressbar').removeClass("progress-bar-success");};
 	});
+
+	video.addEventListener('ended',function(){
+		thankYou();
+		video.removeEventListener('ended');
+	},false);
+
+
 });
 

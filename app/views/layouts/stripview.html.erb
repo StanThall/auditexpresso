@@ -7,9 +7,8 @@
 	<%= stylesheet_link_tag bootstrap_css %>
 	<%= stylesheet_link_tag font_awesome_css %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag "scrollspy2", 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -40,8 +39,6 @@
 
       </div>
     </div>
-    
-    <%= render "application/in_text_donate" %>
 
     <%= render "application/footer" %>
     

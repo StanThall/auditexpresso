@@ -1,5 +1,5 @@
 
-$(document).on("turbolinks:load",function(){
+$(document).ready(function(){
 	
 	var btnDonate = document.getElementById('button_donate');
 	

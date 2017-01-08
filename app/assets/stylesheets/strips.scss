@@ -4,12 +4,16 @@
 
 div#panel-strip{
 	border-radius: 0px;
-	margin-top: 10px;
+	border: 0px;
+	border-bottom: 1px solid $maincolor;
+	margin: 0px;
+	padding: 5px 0px;
+
 	a{color: black;text-decoration:none;}
 	a:hover, a:active, a:focus{text-decoration:none;}
 
-	.panel-heading{background-color: #fff;}
-	.panel-heading:hover{background-color: $maincolor;color: #fff;}
+	.panel-heading{background-color: #F3F7F8;}
+	.panel-heading:hover {background-color: $maincolor;color: #fff;}
 	.panel-title{font-size: 1em;font-weight: bold;};
 	.panel-body{border-top:1px solid $lines;}
 }

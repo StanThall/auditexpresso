@@ -8,7 +8,7 @@
 	<%= content_tag(:i,"",class: "fa fa-user-secret") %>
 	Indiscrétions
 </p>
-<hr class="line_main" style="margin: 5px 0px 10px 0px;">
+<hr class="line_main" style="margin: 5px 0px;">
 <div class="panel-group" id="accordion" role="tablist">
 	<div class="panel panel-default" id="panel-strip">
 		<a data-toggle="collapse" data-parent="#accordion" href="#collapse_<%= @strip.id %>" >
@@ -21,6 +21,7 @@
     <div id="collapse_<%= @strip.id %>" class="panel-collapse collapse in" role="tabpanel">
       <div class="panel-body">
         <%= raw(@strip.content) %>
+        <%= render "application/strip_footer" %>
       </div>
     </div>
   </div>
@@ -36,6 +37,7 @@
 	    <div id="collapse_<%= s.id %>" class="panel-collapse collapse" role="tabpanel">
 	      <div class="panel-body">
 	        <%= raw(s.content) %>
+	        <%= render "application/strip_footer" %>
 	      </div>
 	    </div>
 	  </div>

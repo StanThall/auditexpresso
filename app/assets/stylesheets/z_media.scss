@@ -3,7 +3,7 @@
 and (min-device-width : 320px)
 and (max-device-width : 767px) {
   
-  html { font-size: 250%;}
+  html { font-size: 220%;}
   
   body{
     font-size: 1rem;
@@ -22,8 +22,6 @@ and (max-device-width : 767px) {
   }
 
   .PostArea .badge {padding: 5px 10px;}
-
-  .nav >li > a {font-size: 1rem;}
   
   .lead {font-size: 1.1rem;}
 
@@ -55,7 +53,7 @@ and (max-device-width : 767px) {
     .ensituation {padding: 15px 10px;}
     .well{padding: 15px 10px;}
     .lines{border: 4px solid $lines;}
-    .in-text-image{max-width: 60%;margin-top: 30px;margin-bottom: 30px;}
+    .in-text-image{max-width: 80%;margin-top: 30px;margin-bottom: 30px;}
     .section_title{margin-top: 25px;}
   }
   /*  in Strips*/
@@ -151,6 +149,7 @@ and (max-device-width : 992px) {
   .PostArea .badge_show{font-size: 0.6rem;}
 
   #progress_text{font-size: 0.7rem;} 
+  #break{display: none;}
 
    @media (orientation: landscape) {
     html { font-size: 110%;}
@@ -187,4 +186,5 @@ and (min-device-width : 993px) {
   #play-pause{font-size: 15rem;}
   #mute{font-size: 1.5rem;}
   #expand{font-size: 1.5rem;}
+  #break{display: none;}
 }
