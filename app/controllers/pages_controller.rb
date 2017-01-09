@@ -5,6 +5,12 @@ class PagesController < ApplicationController
 
   def auditometre
   	@pub = Pub.find(rand(1..6))
+  	@title = "Auditomètre"
+  end
+
+  def soutien
+  	@pub = Pub.find(rand(1..6))
+  	@title = "Soutien"
   end
 
 end

@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   post '/logs' => 'logs#create'
   get '/logs' => 'logs#index'
   get '/auditometre' => 'pages#auditometre'
+  get '/soutien' => 'pages#soutien'
   
   root 'blog_posts#index'
 end
